@@ -10,28 +10,44 @@ import Foundation
 
 class Issue {
     
-//    var issueId: String?
-//    var createdTime: String?
-//    var description: String?
-//    var description: String?
-//
-//    init(dictionary: [String : Any]) {
-//        //super.init()
-//
-//        if let userId = dictionary["userId"] as? String {
-//            self.userId = userId
-//        }
-//
-//        if let firstName = dictionary["firstName"] as? String {
-//            self.firstName = firstName
-//        }
-//
-//        if let lastname = dictionary["lastname"] as? String {
-//            self.lastname = lastname
-//        }
-//
-//        if let pictureUrl = dictionary["pictureUrl"] as? String {
-//            self.pictureUrl = pictureUrl
-//        }
-//    }
+    var issueId: String?
+    var creator: String? // USER_ID
+    var description: String?
+    var category: String?
+    var urgent: String?
+    var resolved: Bool?
+    var solver: String? // USER_ID
+    var location: String?
+
+    init(dictionary: [String : Any]) {
+        //super.init()
+
+        if let issueId = dictionary["issueId"] as? String {
+            self.issueId = issueId
+        }
+
+        if let creator = dictionary["creator"] as? String {
+            self.creator = creator
+        }
+
+        if let description = dictionary["description"] as? String {
+            self.description = description
+        }
+
+        if let urgent = dictionary["urgent"] as? String {
+            self.urgent = urgent
+        }
+        
+        if let resolved = dictionary["resolved"] as? Bool {
+            self.resolved = resolved
+        }
+        
+        if let solver = dictionary["solver"] as? String {
+            self.solver = solver
+        }
+        
+        if let location = dictionary["location"] as? String {
+            self.location = location
+        }
+    }
 }

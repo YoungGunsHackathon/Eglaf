@@ -7,9 +7,9 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>217650405780-p861c5onpkl5uhlfvfiahg3ei2ah4fqk.apps.googleusercontent.com</string>
+	<string>217650405780-2rnqo207nhnnif12eo7pu1qdm8fraib3.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.217650405780-p861c5onpkl5uhlfvfiahg3ei2ah4fqk</string>
+	<string>com.googleusercontent.apps.217650405780-2rnqo207nhnnif12eo7pu1qdm8fraib3</string>
 	<key>API_KEY</key>
 	<string>AIzaSyD04_a6NperKwwdhkh8nRWnDOkiBHLK3A0</string>
 	<key>GCM_SENDER_ID</key>
@@ -17,7 +17,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>zvadaadam.Eglaf</string>
+	<string>zvadaada.Eglaf</string>
 	<key>PROJECT_ID</key>
 	<string>eglaf-2b82c</string>
 	<key>STORAGE_BUCKET</key>
@@ -33,7 +33,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:217650405780:ios:590522210d6a01a3</string>
+	<string>1:217650405780:ios:4c99110e9827ad9d</string>
 	<key>DATABASE_URL</key>
 	<string>https://eglaf-2b82c.firebaseio.com</string>
 </dict>
