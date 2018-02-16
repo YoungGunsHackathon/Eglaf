@@ -119,7 +119,8 @@ extension QRViewController {
     
     @objc func testFakinFunkce() {
         let vc = ReportViewController.storyboardInit()
-        present(vc, animated: true, completion: nil)
+        let navVC = UINavigationController(rootViewController: vc)
+        present(navVC, animated: true, completion: nil)
     }
 }
 
