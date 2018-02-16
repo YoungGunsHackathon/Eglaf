@@ -31,6 +31,11 @@
 		E306B7FD2037208100CE5483 /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E306B7FC2037208100CE5483 /* ProfileViewController.storyboard */; };
 		E306B7FF2037208E00CE5483 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E306B7FE2037208E00CE5483 /* ProfileViewController.swift */; };
 		C5CCCA0E203721D1009756BB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5CCCA0D203721D0009756BB /* GoogleService-Info.plist */; };
+		E306B8032037246D00CE5483 /* IssueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E306B8012037246D00CE5483 /* IssueTableViewCell.swift */; };
+		E306B8042037246D00CE5483 /* IssueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E306B8022037246D00CE5483 /* IssueTableViewCell.xib */; };
+		E306B8452037276E00CE5483 /* SF-Pro-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = E306B8422037276E00CE5483 /* SF-Pro-Display-Light.otf */; };
+		E306B8462037276E00CE5483 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E306B8432037276E00CE5483 /* SF-Pro-Display-Regular.otf */; };
+		E306B8472037276E00CE5483 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E306B8442037276E00CE5483 /* SF-Pro-Display-Bold.otf */; };
 		E391AD782036D80D002B5FF4 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E391AD772036D80D002B5FF4 /* TabBarViewController.swift */; };
 		E391AD7A2036D85A002B5FF4 /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E391AD792036D85A002B5FF4 /* QRViewController.swift */; };
 		E391AD7D2036D8C0002B5FF4 /* StoryboardInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E391AD7C2036D8C0002B5FF4 /* StoryboardInit.swift */; };
@@ -67,6 +72,11 @@
 		E306B7FC2037208100CE5483 /* ProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
 		E306B7FE2037208E00CE5483 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C5CCCA0D203721D0009756BB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E306B8012037246D00CE5483 /* IssueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueTableViewCell.swift; sourceTree = "<group>"; };
+		E306B8022037246D00CE5483 /* IssueTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IssueTableViewCell.xib; sourceTree = "<group>"; };
+		E306B8422037276E00CE5483 /* SF-Pro-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Light.otf"; sourceTree = "<group>"; };
+		E306B8432037276E00CE5483 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		E306B8442037276E00CE5483 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
 		E391AD772036D80D002B5FF4 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		E391AD792036D85A002B5FF4 /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		E391AD7C2036D8C0002B5FF4 /* StoryboardInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInit.swift; sourceTree = "<group>"; };
@@ -114,6 +124,7 @@
 		C58BD0EF2036DA0A004CEF79 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				E306B8052037269500CE5483 /* Fonts */,
 				C58BD0F02036DA1C004CEF79 /* Utils.swift */,
 			);
 			path = Utils;
@@ -175,6 +186,7 @@
 		C5ABD98120364F6000FA5E75 /* Eglaf */ = {
 			isa = PBXGroup;
 			children = (
+				E306B8002037244B00CE5483 /* Xib */,
 				C5ABD99420364F6E00FA5E75 /* Networking */,
 				C5ABD99620364F8F00FA5E75 /* Model */,
 				C5ABD99520364F8400FA5E75 /* Controller */,
@@ -242,6 +254,25 @@
 				E306B7FC2037208100CE5483 /* ProfileViewController.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		E306B8002037244B00CE5483 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				E306B8012037246D00CE5483 /* IssueTableViewCell.swift */,
+				E306B8022037246D00CE5483 /* IssueTableViewCell.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		E306B8052037269500CE5483 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E306B8442037276E00CE5483 /* SF-Pro-Display-Bold.otf */,
+				E306B8422037276E00CE5483 /* SF-Pro-Display-Light.otf */,
+				E306B8432037276E00CE5483 /* SF-Pro-Display-Regular.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		E391AD7B2036D8B1002B5FF4 /* Extensions */ = {
@@ -318,10 +349,14 @@
 				C5ABD98D20364F6000FA5E75 /* LaunchScreen.storyboard in Resources */,
 				E306B7FD2037208100CE5483 /* ProfileViewController.storyboard in Resources */,
 				E391AD7F2036D91D002B5FF4 /* QRViewController.storyboard in Resources */,
+				E306B8042037246D00CE5483 /* IssueTableViewCell.xib in Resources */,
+				E306B8452037276E00CE5483 /* SF-Pro-Display-Light.otf in Resources */,
 				E306B7F920371F5E00CE5483 /* HomeViewController.storyboard in Resources */,
 				C5CCCA0E203721D1009756BB /* GoogleService-Info.plist in Resources */,
 				C5ABD98A20364F6000FA5E75 /* Assets.xcassets in Resources */,
+				E306B8462037276E00CE5483 /* SF-Pro-Display-Regular.otf in Resources */,
 				C5ABD98820364F6000FA5E75 /* Main.storyboard in Resources */,
+				E306B8472037276E00CE5483 /* SF-Pro-Display-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5ABD98520364F6000FA5E75 /* ViewController.swift in Sources */,
+				E306B8032037246D00CE5483 /* IssueTableViewCell.swift in Sources */,
 				C58BD0F72036F723004CEF79 /* DBProvider.swift in Sources */,
 				E391AD7A2036D85A002B5FF4 /* QRViewController.swift in Sources */,
 				E391AD852036E748002B5FF4 /* OKAlert.swift in Sources */,
