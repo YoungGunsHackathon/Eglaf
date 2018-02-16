@@ -27,14 +27,6 @@ class QRViewController: UIViewController, StoryboardInit {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        UserHandler.sharedInstance.getUser(userId: "user-hash1") { (user) in
-            print(user.userId)
-            print(user.firstName)
-            print(user.lastname)
-            print(user.pictureUrl)
-        }
-        
         initializeQR()
     }
 }
