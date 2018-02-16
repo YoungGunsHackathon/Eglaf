@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import Firebase
+import FirebaseDatabase
 
 class IssueHandler {
     
@@ -15,8 +17,9 @@ class IssueHandler {
     var dbProvider: DBProvider = DBProvider.sharedInstance
     
     
-    func addIssue() {
-        
+    func addIssue(issue: Issue) {
+        issue.createdTime = String(format: "%.0f", Date().timeIntervalSince1970)
+        dbProvider.issueRef.childByAutoId().setValue(issue.createDictionary())
     }
     
     func getIssue(issueId: String, completion: @escaping (Issue)->Void) {

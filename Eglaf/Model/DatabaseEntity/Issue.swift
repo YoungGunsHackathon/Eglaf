@@ -12,6 +12,7 @@ class Issue {
     
     var issueId: String?
     var creator: String? // USER_ID
+    var createdTime: String?
     var description: String?
     var category: String?
     var urgent: Bool?
@@ -30,6 +31,10 @@ class Issue {
 
         if let creator = dictionary["creator"] as? String {
             self.creator = creator
+        }
+        
+        if let createdTime = dictionary["created_time"] as? String {
+            self.createdTime = createdTime
         }
 
         if let description = dictionary["description"] as? String {
@@ -56,4 +61,26 @@ class Issue {
             self.location = location
         }
     }
+    
+    init(description: String, category: String, urgent: Bool, location: String) {
+        self.description = description
+        self.category = category
+        self.urgent = urgent
+        self.location = location
+    }
+    
+    func createDictionary() ->  Dictionary<String, Any> {
+        let data: Dictionary<String, Any> = ["creator": self.creator ?? "user-hash1",
+                                             "created_time": self.createdTime ?? "",
+                                             "description" : self.description ?? "",
+                                             "category" : self.category ?? "",
+                                             "urgent" : self.urgent ?? false,
+                                             "resolved": self.resolved ?? false,
+                                             "solver" : self.solver ?? "",
+                                             "location" : self.location ?? ""
+        ]
+        return data
+    }
+    
 }
+
