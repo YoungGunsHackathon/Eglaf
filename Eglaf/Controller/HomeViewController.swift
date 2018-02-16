@@ -55,7 +55,7 @@ extension HomeViewController {
             NSAttributedStringKey.foregroundColor: UIColor.white,
             NSAttributedStringKey.kern: 4
         ]
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "add"), style: .plain, target: self, action: nil)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "add"), style: .plain, target: self, action: #selector(showReportScreen))
         self.navigationController?.navigationBar.tintColor = UIColor(red:0.35, green:0.43, blue:0.52, alpha:1)
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "ALL", style: .plain, target: self, action: nil)
         self.navigationItem.leftBarButtonItem?.setTitleTextAttributes([
@@ -63,6 +63,11 @@ extension HomeViewController {
             NSAttributedStringKey.foregroundColor: UIColor(red:0.35, green:0.43, blue:0.52, alpha:1),
             NSAttributedStringKey.kern: 2
             ], for: .normal)
+    }
+    @objc func showReportScreen() {
+        let vc = ReportViewController.storyboardInit()
+        let navVC = UINavigationController(rootViewController: vc)
+        present(navVC, animated: true, completion: nil)
     }
     func registerXibs() {
         tableView.register(UINib(nibName: "IssueTableViewCell", bundle: nil), forCellReuseIdentifier: "IssueTableViewCell")
