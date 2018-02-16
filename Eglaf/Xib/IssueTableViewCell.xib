@@ -26,7 +26,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="368" height="113.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ihv-la-bwB">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jindra" translatesAutoresizingMaskIntoConstraints="NO" id="Ihv-la-bwB">
                         <rect key="frame" x="16" y="16" width="50" height="50"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="Z4W-ml-sUz"/>
@@ -57,10 +57,21 @@
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iSz-6W-I38">
                         <rect key="frame" x="81" y="81" width="98" height="20"/>
-                        <color key="backgroundColor" red="1" green="0.52375897119887727" blue="0.27875837640467516" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#CATERING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0v3-UQ-fuk">
+                                <rect key="frame" x="0.0" y="0.0" width="98" height="20"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="10"/>
+                                <color key="textColor" red="0.26666666666666666" green="0.71372549019607845" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <constraints>
+                            <constraint firstItem="0v3-UQ-fuk" firstAttribute="top" secondItem="iSz-6W-I38" secondAttribute="top" id="BOi-xO-2CF"/>
+                            <constraint firstAttribute="trailing" secondItem="0v3-UQ-fuk" secondAttribute="trailing" id="Gbq-SX-93O"/>
                             <constraint firstAttribute="height" constant="20" id="cvu-Az-HFw"/>
                             <constraint firstAttribute="width" constant="98" id="lMl-ip-g8t"/>
+                            <constraint firstAttribute="bottom" secondItem="0v3-UQ-fuk" secondAttribute="bottom" id="sho-jK-qWg"/>
+                            <constraint firstItem="0v3-UQ-fuk" firstAttribute="leading" secondItem="iSz-6W-I38" secondAttribute="leading" id="x2o-J5-GZN"/>
                         </constraints>
                     </view>
                     <view alpha="0.050000000000000003" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UqM-Oe-yjQ">
@@ -90,7 +101,17 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="50" y="80"/>
+            <connections>
+                <outlet property="issueTextLabel" destination="XWs-wU-vTh" id="tqv-Yd-jjl"/>
+                <outlet property="nameLabel" destination="NTk-DJ-eKr" id="EAX-R0-euG"/>
+                <outlet property="profileImageView" destination="Ihv-la-bwB" id="I2K-b3-eDW"/>
+                <outlet property="tagView" destination="iSz-6W-I38" id="bsz-Mx-5ey"/>
+                <outlet property="timeLabel" destination="2XO-Ma-g5P" id="mFa-af-t19"/>
+            </connections>
+            <point key="canvasLocation" x="-95" y="83"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="jindra" width="600" height="600"/>
+    </resources>
 </document>
