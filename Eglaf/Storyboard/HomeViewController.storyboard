@@ -17,12 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mnf-ip-HPU">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mnf-ip-HPU">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <color key="backgroundColor" red="0.0" green="0.10196078431372549" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.1019607843" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.1019607843" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="mnf-ip-HPU" firstAttribute="leading" secondItem="8aw-4F-7x0" secondAttribute="leading" id="Go6-nB-zvd"/>
                             <constraint firstItem="mnf-ip-HPU" firstAttribute="top" secondItem="8aw-4F-7x0" secondAttribute="top" id="Oen-FN-I5q"/>
@@ -31,10 +31,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8aw-4F-7x0"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="mnf-ip-HPU" id="flR-hJ-pxi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="821-DL-iQN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="401" y="-228"/>
+            <point key="canvasLocation" x="490" y="-266"/>
         </scene>
     </scenes>
 </document>
