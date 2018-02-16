@@ -38,6 +38,11 @@
 		E306B8462037276E00CE5483 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E306B8432037276E00CE5483 /* SF-Pro-Display-Regular.otf */; };
 		E306B8472037276E00CE5483 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E306B8442037276E00CE5483 /* SF-Pro-Display-Bold.otf */; };
 		E37A2BC6203737EE006A3F7D /* NavBarHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37A2BC5203737EE006A3F7D /* NavBarHeight.swift */; };
+		E37A2BCC20375D31006A3F7D /* ReportViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E37A2BCB20375D31006A3F7D /* ReportViewController.storyboard */; };
+		E37A2BCE20375D4A006A3F7D /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37A2BCD20375D4A006A3F7D /* ReportViewController.swift */; };
+		E37A2BD1203760C2006A3F7D /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37A2BCF203760C2006A3F7D /* CategoryCollectionViewCell.swift */; };
+		E37A2BD2203760C2006A3F7D /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E37A2BD0203760C2006A3F7D /* CategoryCollectionViewCell.xib */; };
+		E37A2BD420376744006A3F7D /* IssueCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37A2BD320376744006A3F7D /* IssueCategory.swift */; };
 		E391AD782036D80D002B5FF4 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E391AD772036D80D002B5FF4 /* TabBarViewController.swift */; };
 		E391AD7A2036D85A002B5FF4 /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E391AD792036D85A002B5FF4 /* QRViewController.swift */; };
 		E391AD7D2036D8C0002B5FF4 /* StoryboardInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E391AD7C2036D8C0002B5FF4 /* StoryboardInit.swift */; };
@@ -81,6 +86,11 @@
 		E306B8432037276E00CE5483 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
 		E306B8442037276E00CE5483 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
 		E37A2BC5203737EE006A3F7D /* NavBarHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarHeight.swift; sourceTree = "<group>"; };
+		E37A2BCB20375D31006A3F7D /* ReportViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReportViewController.storyboard; sourceTree = "<group>"; };
+		E37A2BCD20375D4A006A3F7D /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		E37A2BCF203760C2006A3F7D /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		E37A2BD0203760C2006A3F7D /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		E37A2BD320376744006A3F7D /* IssueCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueCategory.swift; sourceTree = "<group>"; };
 		E391AD772036D80D002B5FF4 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		E391AD792036D85A002B5FF4 /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		E391AD7C2036D8C0002B5FF4 /* StoryboardInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInit.swift; sourceTree = "<group>"; };
@@ -227,6 +237,7 @@
 				E391AD792036D85A002B5FF4 /* QRViewController.swift */,
 				E306B7FA20371F6800CE5483 /* HomeViewController.swift */,
 				E306B7FE2037208E00CE5483 /* ProfileViewController.swift */,
+				E37A2BCD20375D4A006A3F7D /* ReportViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -236,6 +247,7 @@
 			children = (
 				C58BD0F22036E957004CEF79 /* DatabaseEntity */,
 				C5ABD99E203652CF00FA5E75 /* APIEntity */,
+				E37A2BD320376744006A3F7D /* IssueCategory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -257,6 +269,7 @@
 				E391AD7E2036D91D002B5FF4 /* QRViewController.storyboard */,
 				E306B7F820371F5E00CE5483 /* HomeViewController.storyboard */,
 				E306B7FC2037208100CE5483 /* ProfileViewController.storyboard */,
+				E37A2BCB20375D31006A3F7D /* ReportViewController.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -266,6 +279,8 @@
 			children = (
 				E306B8012037246D00CE5483 /* IssueTableViewCell.swift */,
 				E306B8022037246D00CE5483 /* IssueTableViewCell.xib */,
+				E37A2BCF203760C2006A3F7D /* CategoryCollectionViewCell.swift */,
+				E37A2BD0203760C2006A3F7D /* CategoryCollectionViewCell.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -357,6 +372,8 @@
 				E391AD7F2036D91D002B5FF4 /* QRViewController.storyboard in Resources */,
 				E306B8042037246D00CE5483 /* IssueTableViewCell.xib in Resources */,
 				E306B8452037276E00CE5483 /* SF-Pro-Display-Light.otf in Resources */,
+				E37A2BCC20375D31006A3F7D /* ReportViewController.storyboard in Resources */,
+				E37A2BD2203760C2006A3F7D /* CategoryCollectionViewCell.xib in Resources */,
 				E306B7F920371F5E00CE5483 /* HomeViewController.storyboard in Resources */,
 				C5CCCA0E203721D1009756BB /* GoogleService-Info.plist in Resources */,
 				C5ABD98A20364F6000FA5E75 /* Assets.xcassets in Resources */,
@@ -444,10 +461,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5CCCA1020373FEA009756BB /* UIImageView+Extension.swift in Sources */,
+				E37A2BD420376744006A3F7D /* IssueCategory.swift in Sources */,
 				C5ABD98520364F6000FA5E75 /* ViewController.swift in Sources */,
 				E306B8032037246D00CE5483 /* IssueTableViewCell.swift in Sources */,
+				E37A2BCE20375D4A006A3F7D /* ReportViewController.swift in Sources */,
 				C58BD0F72036F723004CEF79 /* DBProvider.swift in Sources */,
 				E391AD7A2036D85A002B5FF4 /* QRViewController.swift in Sources */,
+				E37A2BD1203760C2006A3F7D /* CategoryCollectionViewCell.swift in Sources */,
 				E391AD852036E748002B5FF4 /* OKAlert.swift in Sources */,
 				E391AD7D2036D8C0002B5FF4 /* StoryboardInit.swift in Sources */,
 				C58BD0FF2036FAAA004CEF79 /* IssueHandler.swift in Sources */,

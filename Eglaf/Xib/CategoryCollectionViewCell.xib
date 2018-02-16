@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCollectionViewCell" id="gTV-IL-0wX" customClass="CategoryCollectionViewCell" customModule="Eglaf" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="99" height="46"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="99" height="46"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Skf-Qm-WZF">
+                        <rect key="frame" x="0.0" y="0.0" width="99" height="46"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#CATERING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uva-Cr-hh9">
+                                <rect key="frame" x="0.0" y="0.0" width="99" height="46"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="10"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Uva-Cr-hh9" secondAttribute="trailing" id="Emg-4v-Heg"/>
+                            <constraint firstItem="Uva-Cr-hh9" firstAttribute="top" secondItem="Skf-Qm-WZF" secondAttribute="top" id="IcP-zg-MHS"/>
+                            <constraint firstAttribute="bottom" secondItem="Uva-Cr-hh9" secondAttribute="bottom" id="VSJ-f6-T2f"/>
+                            <constraint firstItem="Uva-Cr-hh9" firstAttribute="leading" secondItem="Skf-Qm-WZF" secondAttribute="leading" id="vcS-mR-4RV"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Skf-Qm-WZF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7eV-jL-g5l"/>
+                <constraint firstItem="Skf-Qm-WZF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="TF8-L1-hzh"/>
+                <constraint firstAttribute="trailing" secondItem="Skf-Qm-WZF" secondAttribute="trailing" id="hxQ-gK-SkI"/>
+                <constraint firstAttribute="bottom" secondItem="Skf-Qm-WZF" secondAttribute="bottom" id="tIN-vK-7LP"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="bgView" destination="Skf-Qm-WZF" id="Hlg-Qz-OIw"/>
+                <outlet property="categoryNameLabel" destination="Uva-Cr-hh9" id="pbh-bj-sw7"/>
+            </connections>
+            <point key="canvasLocation" x="24.5" y="52"/>
+        </collectionViewCell>
+    </objects>
+</document>

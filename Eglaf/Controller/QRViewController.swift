@@ -62,6 +62,7 @@ extension QRViewController {
         
         guard let captureDevice = captureDeviceOptional else {
             showOKAlert(message: "No input device available")
+            initializeUI()
             return
         }
         
