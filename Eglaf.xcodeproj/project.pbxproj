@@ -26,16 +26,17 @@
 		C5ABD9A0203653E300FA5E75 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABD99F203653E300FA5E75 /* Ticket.swift */; };
 		C5ABD9A2203653EE00FA5E75 /* Tickets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABD9A1203653EE00FA5E75 /* Tickets.swift */; };
 		C5ABD9A42036627900FA5E75 /* CheckInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABD9A32036627900FA5E75 /* CheckInResponse.swift */; };
+		C5CCCA0E203721D1009756BB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5CCCA0D203721D0009756BB /* GoogleService-Info.plist */; };
 		E306B7F920371F5E00CE5483 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E306B7F820371F5E00CE5483 /* HomeViewController.storyboard */; };
 		E306B7FB20371F6800CE5483 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E306B7FA20371F6800CE5483 /* HomeViewController.swift */; };
 		E306B7FD2037208100CE5483 /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E306B7FC2037208100CE5483 /* ProfileViewController.storyboard */; };
 		E306B7FF2037208E00CE5483 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E306B7FE2037208E00CE5483 /* ProfileViewController.swift */; };
-		C5CCCA0E203721D1009756BB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5CCCA0D203721D0009756BB /* GoogleService-Info.plist */; };
 		E306B8032037246D00CE5483 /* IssueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E306B8012037246D00CE5483 /* IssueTableViewCell.swift */; };
 		E306B8042037246D00CE5483 /* IssueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E306B8022037246D00CE5483 /* IssueTableViewCell.xib */; };
 		E306B8452037276E00CE5483 /* SF-Pro-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = E306B8422037276E00CE5483 /* SF-Pro-Display-Light.otf */; };
 		E306B8462037276E00CE5483 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E306B8432037276E00CE5483 /* SF-Pro-Display-Regular.otf */; };
 		E306B8472037276E00CE5483 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E306B8442037276E00CE5483 /* SF-Pro-Display-Bold.otf */; };
+		E37A2BC6203737EE006A3F7D /* NavBarHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37A2BC5203737EE006A3F7D /* NavBarHeight.swift */; };
 		E391AD782036D80D002B5FF4 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E391AD772036D80D002B5FF4 /* TabBarViewController.swift */; };
 		E391AD7A2036D85A002B5FF4 /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E391AD792036D85A002B5FF4 /* QRViewController.swift */; };
 		E391AD7D2036D8C0002B5FF4 /* StoryboardInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E391AD7C2036D8C0002B5FF4 /* StoryboardInit.swift */; };
@@ -67,16 +68,17 @@
 		C5ABD99F203653E300FA5E75 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		C5ABD9A1203653EE00FA5E75 /* Tickets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tickets.swift; sourceTree = "<group>"; };
 		C5ABD9A32036627900FA5E75 /* CheckInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInResponse.swift; sourceTree = "<group>"; };
+		C5CCCA0D203721D0009756BB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E306B7F820371F5E00CE5483 /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
 		E306B7FA20371F6800CE5483 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E306B7FC2037208100CE5483 /* ProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
 		E306B7FE2037208E00CE5483 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		C5CCCA0D203721D0009756BB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E306B8012037246D00CE5483 /* IssueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueTableViewCell.swift; sourceTree = "<group>"; };
 		E306B8022037246D00CE5483 /* IssueTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IssueTableViewCell.xib; sourceTree = "<group>"; };
 		E306B8422037276E00CE5483 /* SF-Pro-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Light.otf"; sourceTree = "<group>"; };
 		E306B8432037276E00CE5483 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
 		E306B8442037276E00CE5483 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		E37A2BC5203737EE006A3F7D /* NavBarHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarHeight.swift; sourceTree = "<group>"; };
 		E391AD772036D80D002B5FF4 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		E391AD792036D85A002B5FF4 /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		E391AD7C2036D8C0002B5FF4 /* StoryboardInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInit.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				E306B8052037269500CE5483 /* Fonts */,
 				C58BD0F02036DA1C004CEF79 /* Utils.swift */,
+				E37A2BC5203737EE006A3F7D /* NavBarHeight.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				C58BD0FA2036F7A4004CEF79 /* Constants.swift in Sources */,
 				C5ABD98320364F6000FA5E75 /* AppDelegate.swift in Sources */,
 				E306B7FF2037208E00CE5483 /* ProfileViewController.swift in Sources */,
+				E37A2BC6203737EE006A3F7D /* NavBarHeight.swift in Sources */,
 				C5ABD9A2203653EE00FA5E75 /* Tickets.swift in Sources */,
 				C58BD1032036FB20004CEF79 /* Issue.swift in Sources */,
 			);

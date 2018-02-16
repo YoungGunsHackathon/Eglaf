@@ -22,7 +22,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.1019607843" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.1019607843" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.1019607843" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="mnf-ip-HPU" firstAttribute="leading" secondItem="8aw-4F-7x0" secondAttribute="leading" id="Go6-nB-zvd"/>
                             <constraint firstItem="mnf-ip-HPU" firstAttribute="top" secondItem="8aw-4F-7x0" secondAttribute="top" id="Oen-FN-I5q"/>
