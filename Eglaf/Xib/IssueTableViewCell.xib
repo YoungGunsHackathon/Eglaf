@@ -26,7 +26,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="368" height="113.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ihv-la-bwB">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jindra" translatesAutoresizingMaskIntoConstraints="NO" id="Ihv-la-bwB">
                         <rect key="frame" x="16" y="16" width="50" height="50"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="Z4W-ml-sUz"/>
@@ -111,4 +111,7 @@
             <point key="canvasLocation" x="-95" y="83"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="jindra" width="600" height="600"/>
+    </resources>
 </document>

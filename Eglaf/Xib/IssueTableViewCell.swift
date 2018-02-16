@@ -21,6 +21,8 @@ class IssueTableViewCell: UITableViewCell {
         self.tagView.layer.borderWidth = 1
         self.tagView.layer.borderColor = UIColor(red:0.27, green:0.71, blue:0.77, alpha:1).cgColor
         self.tagView.layer.cornerRadius = 4
+        self.profileImageView.layer.cornerRadius = self.profileImageView.frame.size.width / 2
+        self.profileImageView.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
