@@ -1,0 +1,6 @@
+framework module Pods_Eglaf {
+  umbrella header "Pods-Eglaf-umbrella.h"
+
+  export *
+  module * { export * }
+}
