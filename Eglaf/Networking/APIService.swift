@@ -21,6 +21,8 @@ enum RequestError: Error {
     case mapping()
 }
 
+//https://svc.hackathon.getmyia.com/hackathon/tickets/cc6c6fad-8047-4084-9aca-d7be1ee06c92eve
+
 class APIService {
     // MARK: Dependencies
     let network: Networking
@@ -32,7 +34,7 @@ class APIService {
     }
     
     func resourceURL(_ path: String) -> URL {
-        let URL = Foundation.URL(string: "")!
+        let URL = Foundation.URL(string: "https://svc.hackathon.getmyia.com/hackathon/tickets/")!
         let relativeURL = Foundation.URL(string: path, relativeTo: URL)!
         return relativeURL
     }

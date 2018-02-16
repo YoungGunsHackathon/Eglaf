@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		89A54A66A97849A20AB24C1D /* Pods_Eglaf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4AEC96CDBD5121082E977F /* Pods_Eglaf.framework */; };
+		C58BD0F12036DA1C004CEF79 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58BD0F02036DA1C004CEF79 /* Utils.swift */; };
 		C5ABD98320364F6000FA5E75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABD98220364F6000FA5E75 /* AppDelegate.swift */; };
 		C5ABD98520364F6000FA5E75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABD98420364F6000FA5E75 /* ViewController.swift */; };
 		C5ABD98820364F6000FA5E75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5ABD98620364F6000FA5E75 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		50457889FDFFB3E2B70C7C7D /* Pods-Eglaf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eglaf.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Eglaf/Pods-Eglaf.debug.xcconfig"; sourceTree = "<group>"; };
 		A24EE61D0BA474179EE90ED8 /* Pods-Eglaf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eglaf.release.xcconfig"; path = "Pods/Target Support Files/Pods-Eglaf/Pods-Eglaf.release.xcconfig"; sourceTree = "<group>"; };
 		BC4AEC96CDBD5121082E977F /* Pods_Eglaf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eglaf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C58BD0F02036DA1C004CEF79 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		C5ABD97F20364F6000FA5E75 /* Eglaf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eglaf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5ABD98220364F6000FA5E75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5ABD98420364F6000FA5E75 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +73,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C58BD0EE2036D93F004CEF79 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C5ABD99C2036515200FA5E75 /* EventAPIService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		C58BD0EF2036DA0A004CEF79 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C58BD0F02036DA1C004CEF79 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		C5ABD97620364F6000FA5E75 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +110,7 @@
 		C5ABD98120364F6000FA5E75 /* Eglaf */ = {
 			isa = PBXGroup;
 			children = (
+				C58BD0EF2036DA0A004CEF79 /* Utils */,
 				C5ABD9A52036643200FA5E75 /* Storyboard */,
 				C5ABD99620364F8F00FA5E75 /* Model */,
 				C5ABD99520364F8400FA5E75 /* Controller */,
@@ -107,9 +126,9 @@
 		C5ABD99420364F6E00FA5E75 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				C58BD0EE2036D93F004CEF79 /* Service */,
 				C5ABD9972036510900FA5E75 /* APIService.swift */,
 				C5ABD9992036511800FA5E75 /* Network.swift */,
-				C5ABD99C2036515200FA5E75 /* EventAPIService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -289,6 +308,7 @@
 			files = (
 				C5ABD98520364F6000FA5E75 /* ViewController.swift in Sources */,
 				C5ABD9A0203653E300FA5E75 /* Ticket.swift in Sources */,
+				C58BD0F12036DA1C004CEF79 /* Utils.swift in Sources */,
 				C5ABD9982036510900FA5E75 /* APIService.swift in Sources */,
 				C5ABD99D2036515200FA5E75 /* EventAPIService.swift in Sources */,
 				C5ABD9A42036627900FA5E75 /* CheckInResponse.swift in Sources */,
