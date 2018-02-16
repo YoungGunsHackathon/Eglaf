@@ -32,4 +32,13 @@ class UserHandler {
         // TODO
     }
     
+    func getUserWithProfileImage(userId: String, completion: @escaping (User)->Void) {
+        dbProvider.profileRef(UID: userId).observeSingleEvent(of: .value) { (snapshot) in
+            if let dictionary = snapshot.value as? [String : Any] {
+                let user = User(id: userId ,dictionary: dictionary)
+                completion(user)
+            }
+        }
+    }
+    
 }

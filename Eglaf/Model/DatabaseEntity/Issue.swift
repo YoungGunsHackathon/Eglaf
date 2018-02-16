@@ -14,17 +14,19 @@ class Issue {
     var creator: String? // USER_ID
     var description: String?
     var category: String?
-    var urgent: String?
+    var urgent: Bool?
     var resolved: Bool?
     var solver: String? // USER_ID
     var location: String?
 
-    init(dictionary: [String : Any]) {
+    init(id: String, dictionary: [String : Any]) {
         //super.init()
 
-        if let issueId = dictionary["issueId"] as? String {
-            self.issueId = issueId
-        }
+//        if let issueId = dictionary["issueId"] as? String {
+//            self.issueId = issueId
+//        }
+        
+        self.issueId = id
 
         if let creator = dictionary["creator"] as? String {
             self.creator = creator
@@ -33,8 +35,12 @@ class Issue {
         if let description = dictionary["description"] as? String {
             self.description = description
         }
+        
+        if let category = dictionary["category"] as? String {
+            self.category = category
+        }
 
-        if let urgent = dictionary["urgent"] as? String {
+        if let urgent = dictionary["urgent"] as? Bool {
             self.urgent = urgent
         }
         

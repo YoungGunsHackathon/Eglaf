@@ -32,10 +32,12 @@ class DBProvider {
     }
     
     func profileRef(UID: String) -> DatabaseReference {
-        //return userRef.child(UID)
-        return dbRef.child("users").child("user-hash1")
+        return userRef.child(UID)
+        //return dbRef.child("users").child("user-hash1")
     }
     
-    
+    func issueRef(issueId: String) -> DatabaseReference {
+        return issueRef.child(issueId)
+    }
     
 }
