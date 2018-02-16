@@ -41,12 +41,13 @@ class EventAPIService : APIService, EventAPIServicing {
                         { (dictionary) in
                             let ticket = Ticket(dictionary: dictionary)
                             //ticket.setValuesForKeys(dictionary)
-                            tickets.append(ticket)
+                            //tickets.append(ticket)
                         }
                     )
                 }
                 
-                return tickets
+                //return tickets
+                return []
         }
     }
     
