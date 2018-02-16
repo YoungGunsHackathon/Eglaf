@@ -12,4 +12,6 @@ class IssueHandler {
     
     static let sharedInstance = IssueHandler()
     
+    
+    
 }

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		89A54A66A97849A20AB24C1D /* Pods_Eglaf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4AEC96CDBD5121082E977F /* Pods_Eglaf.framework */; };
 		C58BD0F12036DA1C004CEF79 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58BD0F02036DA1C004CEF79 /* Utils.swift */; };
-		C58BD0F52036F675004CEF79 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C58BD0F42036F675004CEF79 /* GoogleService-Info.plist */; };
 		C58BD0F72036F723004CEF79 /* DBProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58BD0F62036F723004CEF79 /* DBProvider.swift */; };
 		C58BD0FA2036F7A4004CEF79 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58BD0F92036F7A4004CEF79 /* Constants.swift */; };
 		C58BD0FD2036FA9D004CEF79 /* UserHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58BD0FC2036FA9D004CEF79 /* UserHandler.swift */; };
@@ -27,6 +26,7 @@
 		C5ABD9A0203653E300FA5E75 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABD99F203653E300FA5E75 /* Ticket.swift */; };
 		C5ABD9A2203653EE00FA5E75 /* Tickets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABD9A1203653EE00FA5E75 /* Tickets.swift */; };
 		C5ABD9A42036627900FA5E75 /* CheckInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABD9A32036627900FA5E75 /* CheckInResponse.swift */; };
+		C5CCCA0E203721D1009756BB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5CCCA0D203721D0009756BB /* GoogleService-Info.plist */; };
 		E391AD782036D80D002B5FF4 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E391AD772036D80D002B5FF4 /* TabBarViewController.swift */; };
 		E391AD7A2036D85A002B5FF4 /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E391AD792036D85A002B5FF4 /* QRViewController.swift */; };
 		E391AD7D2036D8C0002B5FF4 /* StoryboardInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E391AD7C2036D8C0002B5FF4 /* StoryboardInit.swift */; };
@@ -39,7 +39,6 @@
 		A24EE61D0BA474179EE90ED8 /* Pods-Eglaf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eglaf.release.xcconfig"; path = "Pods/Target Support Files/Pods-Eglaf/Pods-Eglaf.release.xcconfig"; sourceTree = "<group>"; };
 		BC4AEC96CDBD5121082E977F /* Pods_Eglaf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eglaf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C58BD0F02036DA1C004CEF79 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		C58BD0F42036F675004CEF79 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C58BD0F62036F723004CEF79 /* DBProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBProvider.swift; sourceTree = "<group>"; };
 		C58BD0F92036F7A4004CEF79 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C58BD0FC2036FA9D004CEF79 /* UserHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHandler.swift; sourceTree = "<group>"; };
@@ -59,6 +58,7 @@
 		C5ABD99F203653E300FA5E75 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		C5ABD9A1203653EE00FA5E75 /* Tickets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tickets.swift; sourceTree = "<group>"; };
 		C5ABD9A32036627900FA5E75 /* CheckInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInResponse.swift; sourceTree = "<group>"; };
+		C5CCCA0D203721D0009756BB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E391AD772036D80D002B5FF4 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		E391AD792036D85A002B5FF4 /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		E391AD7C2036D8C0002B5FF4 /* StoryboardInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInit.swift; sourceTree = "<group>"; };
@@ -178,7 +178,7 @@
 				C5ABD98920364F6000FA5E75 /* Assets.xcassets */,
 				C5ABD98B20364F6000FA5E75 /* LaunchScreen.storyboard */,
 				C5ABD98E20364F6000FA5E75 /* Info.plist */,
-				C58BD0F42036F675004CEF79 /* GoogleService-Info.plist */,
+				C5CCCA0D203721D0009756BB /* GoogleService-Info.plist */,
 			);
 			path = Eglaf;
 			sourceTree = "<group>";
@@ -305,7 +305,7 @@
 			files = (
 				C5ABD98D20364F6000FA5E75 /* LaunchScreen.storyboard in Resources */,
 				E391AD7F2036D91D002B5FF4 /* QRViewController.storyboard in Resources */,
-				C58BD0F52036F675004CEF79 /* GoogleService-Info.plist in Resources */,
+				C5CCCA0E203721D1009756BB /* GoogleService-Info.plist in Resources */,
 				C5ABD98A20364F6000FA5E75 /* Assets.xcassets in Resources */,
 				C5ABD98820364F6000FA5E75 /* Main.storyboard in Resources */,
 			);
