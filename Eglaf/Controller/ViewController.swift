@@ -26,8 +26,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         getTickets()
-        
-        print(tickets)
     }
     
     override func didReceiveMemoryWarning() {
