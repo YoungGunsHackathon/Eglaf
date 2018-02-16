@@ -32,6 +32,10 @@ class EventAPIService : APIService, EventAPIServicing {
                 var tickets: Tickets
                 var ticketArray : [Ticket] = []
                 
+                if let value = data as? [String : Any] {
+                    tickets = Tickets(dictionary: value)
+                }
+                
                 if let array = data as? [[String : Any]] {
                     array.forEach(
                         { (dictionary) in
