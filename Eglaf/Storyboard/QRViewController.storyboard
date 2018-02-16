@@ -18,17 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Testin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYh-bu-tzo">
-                                <rect key="frame" x="148" y="323" width="64" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No QR code detected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9x-jt-4KM">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Eyb-uS-ByT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="C9x-jt-4KM" firstAttribute="leading" secondItem="ulD-zv-1Sl" secondAttribute="leading" id="4pA-NX-sjv"/>
+                            <constraint firstItem="ulD-zv-1Sl" firstAttribute="trailing" secondItem="C9x-jt-4KM" secondAttribute="trailing" id="ZKS-mF-UHj"/>
+                            <constraint firstItem="C9x-jt-4KM" firstAttribute="bottom" secondItem="ulD-zv-1Sl" secondAttribute="bottom" id="lmn-Uk-l2F"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ulD-zv-1Sl"/>
                     </view>
+                    <connections>
+                        <outlet property="qrLabel" destination="C9x-jt-4KM" id="yLE-5n-pPC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bco-Zk-Abz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
