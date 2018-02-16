@@ -18,6 +18,8 @@ class ReportViewController: UIViewController, StoryboardInit {
         registerNibs()
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.allowsSelection = true
+        collectionView.allowsMultipleSelection = false
     }
 }
 
@@ -27,6 +29,9 @@ extension ReportViewController {
     }
 }
 
+extension ReportViewController: UIScrollViewDelegate {
+    
+}
 
 extension ReportViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -39,8 +44,7 @@ extension ReportViewController: UICollectionViewDelegateFlowLayout {
 
 extension ReportViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath) as! CategoryCollectionViewCell
-        cell.inverted = true
+        
     }
 }
 
@@ -50,7 +54,9 @@ extension ReportViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCollectionViewCell", for: indexPath) as! CategoryCollectionViewCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCollectionViewCell", for: indexPath) as? CategoryCollectionViewCell else {
+            return UICollectionViewCell()
+        }
         cell.categoryType = issueCategories[indexPath.row]
         return cell
     }
