@@ -88,13 +88,32 @@ extension QRViewController {
         captureSession.startRunning()
         initializeUI()
     }
-    
+}
+
+//MARK: - QRViewController (UI)
+
+extension QRViewController {
     func initializeUI() {
         qrCodeFrameView.layer.borderColor = UIColor.green.cgColor
         qrCodeFrameView.layer.borderWidth = 2
         view.addSubview(qrCodeFrameView)
         view.bringSubview(toFront: qrCodeFrameView)
         view.bringSubview(toFront: qrLabel)
+        prepareNavBar()
+    }
+    func prepareNavBar() {
+        //self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 0, green: 0.1, blue: 0.22, alpha: 1)
+        //self.navigationController?.view.backgroundColor = UIColor.red
+        self.navigationItem.title = "TICKET SCAN"
+        self.navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedStringKey.font: UIFont(name: "SFProDisplay-Regular", size: 14)!,
+            NSAttributedStringKey.foregroundColor: UIColor.white,
+            NSAttributedStringKey.kern: 4
+        ]
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "people"), style: .plain, target: self, action: nil)
+        self.navigationController?.navigationBar.tintColor = UIColor(red:0.35, green:0.43, blue:0.52, alpha:1)
     }
 }
 
@@ -133,7 +152,11 @@ extension QRViewController {
         guard let url = URLComponents(string: qrString) else { return }
         let ticketID = url.queryItems?.first?.value
         qrLabel.text = ticketID
-        showTicketConfirmation(ticketID: ticketID!)
+        guard let ticketIDUnwrapped = ticketID else {
+            showOKAlert(message: "Unrelevant QR Code!")
+            return
+        }
+        showTicketConfirmation(ticketID: ticketIDUnwrapped)
     }
     func showTicketConfirmation(ticketID: String) {
         if compareTicketID(ticketID: ticketID) {
