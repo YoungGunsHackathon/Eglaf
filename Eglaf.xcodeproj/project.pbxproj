@@ -19,7 +19,10 @@
 		C5ABD9A0203653E300FA5E75 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABD99F203653E300FA5E75 /* Ticket.swift */; };
 		C5ABD9A2203653EE00FA5E75 /* Tickets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABD9A1203653EE00FA5E75 /* Tickets.swift */; };
 		C5ABD9A42036627900FA5E75 /* CheckInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABD9A32036627900FA5E75 /* CheckInResponse.swift */; };
-		C5ABD9A72036645300FA5E75 /* TapBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5ABD9A62036645300FA5E75 /* TapBar.storyboard */; };
+		E391AD782036D80D002B5FF4 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E391AD772036D80D002B5FF4 /* TabBarViewController.swift */; };
+		E391AD7A2036D85A002B5FF4 /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E391AD792036D85A002B5FF4 /* QRViewController.swift */; };
+		E391AD7D2036D8C0002B5FF4 /* StoryboardInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E391AD7C2036D8C0002B5FF4 /* StoryboardInit.swift */; };
+		E391AD7F2036D91D002B5FF4 /* QRViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E391AD7E2036D91D002B5FF4 /* QRViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +42,10 @@
 		C5ABD99F203653E300FA5E75 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		C5ABD9A1203653EE00FA5E75 /* Tickets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tickets.swift; sourceTree = "<group>"; };
 		C5ABD9A32036627900FA5E75 /* CheckInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInResponse.swift; sourceTree = "<group>"; };
-		C5ABD9A62036645300FA5E75 /* TapBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TapBar.storyboard; sourceTree = "<group>"; };
+		E391AD772036D80D002B5FF4 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		E391AD792036D85A002B5FF4 /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
+		E391AD7C2036D8C0002B5FF4 /* StoryboardInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInit.swift; sourceTree = "<group>"; };
+		E391AD7E2036D91D002B5FF4 /* QRViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,7 @@
 				C5ABD99620364F8F00FA5E75 /* Model */,
 				C5ABD99520364F8400FA5E75 /* Controller */,
 				C5ABD99420364F6E00FA5E75 /* Networking */,
+				E391AD7B2036D8B1002B5FF4 /* Extensions */,
 				C5ABD98220364F6000FA5E75 /* AppDelegate.swift */,
 				C5ABD98920364F6000FA5E75 /* Assets.xcassets */,
 				C5ABD98B20364F6000FA5E75 /* LaunchScreen.storyboard */,
@@ -118,6 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				C5ABD98420364F6000FA5E75 /* ViewController.swift */,
+				E391AD772036D80D002B5FF4 /* TabBarViewController.swift */,
+				E391AD792036D85A002B5FF4 /* QRViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -144,9 +153,17 @@
 			isa = PBXGroup;
 			children = (
 				C5ABD98620364F6000FA5E75 /* Main.storyboard */,
-				C5ABD9A62036645300FA5E75 /* TapBar.storyboard */,
+				E391AD7E2036D91D002B5FF4 /* QRViewController.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		E391AD7B2036D8B1002B5FF4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E391AD7C2036D8C0002B5FF4 /* StoryboardInit.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,8 +229,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5ABD98D20364F6000FA5E75 /* LaunchScreen.storyboard in Resources */,
+				E391AD7F2036D91D002B5FF4 /* QRViewController.storyboard in Resources */,
 				C5ABD98A20364F6000FA5E75 /* Assets.xcassets in Resources */,
-				C5ABD9A72036645300FA5E75 /* TapBar.storyboard in Resources */,
 				C5ABD98820364F6000FA5E75 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,9 +305,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5ABD98520364F6000FA5E75 /* ViewController.swift in Sources */,
+				E391AD7A2036D85A002B5FF4 /* QRViewController.swift in Sources */,
+				E391AD7D2036D8C0002B5FF4 /* StoryboardInit.swift in Sources */,
 				C5ABD9A0203653E300FA5E75 /* Ticket.swift in Sources */,
 				C5ABD9982036510900FA5E75 /* APIService.swift in Sources */,
 				C5ABD99D2036515200FA5E75 /* EventAPIService.swift in Sources */,
+				E391AD782036D80D002B5FF4 /* TabBarViewController.swift in Sources */,
 				C5ABD9A42036627900FA5E75 /* CheckInResponse.swift in Sources */,
 				C5ABD99A2036511800FA5E75 /* Network.swift in Sources */,
 				C5ABD98320364F6000FA5E75 /* AppDelegate.swift in Sources */,
