@@ -31,5 +31,11 @@ class DBProvider {
         return Storage.storage().reference(forURL: Constants.STORAGE_URL)
     }
     
+    func profileRef(UID: String) -> DatabaseReference {
+        //return userRef.child(UID)
+        return dbRef.child("users").child("user-hash1")
+    }
+    
+    
     
 }

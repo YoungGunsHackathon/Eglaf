@@ -14,18 +14,16 @@ class User {
     var lastname: String?
     var pictureUrl: String?
     
-    init(dictionary: [String : Any]) {
+    init(id: String, dictionary: [String : Any]) {
         //super.init()
         
-        if let userId = dictionary["userId"] as? String {
-            self.userId = userId
-        }
+        self.userId = id
         
         if let firstName = dictionary["firstName"] as? String {
             self.firstName = firstName
         }
         
-        if let lastname = dictionary["lastname"] as? String {
+        if let lastname = dictionary["lastName"] as? String {
             self.lastname = lastname
         }
         

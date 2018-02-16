@@ -14,8 +14,8 @@ struct Constants {
     static let STORAGE_URL = "gs://eglaf-2b82c.appspot.com"
 
     struct DatabaseEntities {
-        static let ISSUE = "issue"
-        static let USER = "user"
+        static let ISSUE = "issues"
+        static let USER = "users"
     }
     
     struct Issue {
