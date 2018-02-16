@@ -113,14 +113,8 @@ extension QRViewController {
             NSAttributedStringKey.foregroundColor: UIColor.white,
             NSAttributedStringKey.kern: 4
         ]
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "people"), style: .plain, target: self, action: #selector(testFakinFunkce))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "people"), style: .plain, target: self, action: nil)
         self.navigationController?.navigationBar.tintColor = UIColor(red:0.35, green:0.43, blue:0.52, alpha:1)
-    }
-    
-    @objc func testFakinFunkce() {
-        let vc = ReportViewController.storyboardInit()
-        let navVC = UINavigationController(rootViewController: vc)
-        present(navVC, animated: true, completion: nil)
     }
 }
 
