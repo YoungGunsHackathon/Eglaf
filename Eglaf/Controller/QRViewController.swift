@@ -98,7 +98,16 @@ extension QRViewController: AVCaptureMetadataOutputObjectsDelegate {
             qrLabel.text = "QR contains no text"
             return
         }
-        
-        qrLabel.text = qrString
+
+        getTicketIDFrom(qrString: qrString)
+    }
+}
+
+//MARK: - QRViewController (QR Checking)
+
+extension QRViewController {
+    func getTicketIDFrom(qrString: String) {
+        guard let url = URLComponents(string: qrString) else { return }
+        qrLabel.text = url.queryItems?.first?.value
     }
 }
