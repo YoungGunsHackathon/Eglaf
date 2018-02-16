@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Bold.otf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="IssueTableViewCell" rowHeight="110" id="KGk-i7-Jjw" customClass="IssueTableViewCell" customModule="Eglaf" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="368" height="114"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="368" height="113.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jindra" translatesAutoresizingMaskIntoConstraints="NO" id="Ihv-la-bwB">
+                        <rect key="frame" x="16" y="16" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="Z4W-ml-sUz"/>
+                            <constraint firstAttribute="width" constant="50" id="cVy-s8-Xps"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jonathan Palmer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTk-DJ-eKr">
+                        <rect key="frame" x="81" y="12" width="107.5" height="17"/>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="14"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XWs-wU-vTh">
+                        <rect key="frame" x="81" y="34" width="272" height="42"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="42" id="Nep-cb-rwi"/>
+                        </constraints>
+                        <string key="text">Have you ever finally just gave in to the temptation and read your horoscope in the newspaper on Sunday morning? Sure, we all have. For most of us, it’s a curiosity, an amusement to see what they say our day will be like based on the sign of the zodiac that we were born under. </string>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="13"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 minutes ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2XO-Ma-g5P">
+                        <rect key="frame" x="269" y="13" width="83" height="16"/>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="13"/>
+                        <color key="textColor" red="0.31764705882352939" green="0.3411764705882353" blue="0.49803921568627452" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iSz-6W-I38">
+                        <rect key="frame" x="81" y="81" width="98" height="20"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#CATERING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0v3-UQ-fuk">
+                                <rect key="frame" x="0.0" y="0.0" width="98" height="20"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="10"/>
+                                <color key="textColor" red="0.26666666666666666" green="0.71372549019607845" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="0v3-UQ-fuk" firstAttribute="top" secondItem="iSz-6W-I38" secondAttribute="top" id="BOi-xO-2CF"/>
+                            <constraint firstAttribute="trailing" secondItem="0v3-UQ-fuk" secondAttribute="trailing" id="Gbq-SX-93O"/>
+                            <constraint firstAttribute="height" constant="20" id="cvu-Az-HFw"/>
+                            <constraint firstAttribute="width" constant="98" id="lMl-ip-g8t"/>
+                            <constraint firstAttribute="bottom" secondItem="0v3-UQ-fuk" secondAttribute="bottom" id="sho-jK-qWg"/>
+                            <constraint firstItem="0v3-UQ-fuk" firstAttribute="leading" secondItem="iSz-6W-I38" secondAttribute="leading" id="x2o-J5-GZN"/>
+                        </constraints>
+                    </view>
+                    <view alpha="0.050000000000000003" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UqM-Oe-yjQ">
+                        <rect key="frame" x="0.0" y="113" width="368" height="1"/>
+                        <color key="backgroundColor" red="0.34509803921568627" green="0.42745098039215684" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="khG-fY-tuY"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.10196078431372549" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                <constraints>
+                    <constraint firstItem="Ihv-la-bwB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Amy-YL-Gfr"/>
+                    <constraint firstItem="iSz-6W-I38" firstAttribute="leading" secondItem="XWs-wU-vTh" secondAttribute="leading" id="Glz-Dn-s88"/>
+                    <constraint firstAttribute="trailing" secondItem="2XO-Ma-g5P" secondAttribute="trailing" constant="16" id="IAs-XI-2h5"/>
+                    <constraint firstItem="XWs-wU-vTh" firstAttribute="leading" secondItem="NTk-DJ-eKr" secondAttribute="leading" id="J6e-Zj-nbq"/>
+                    <constraint firstItem="XWs-wU-vTh" firstAttribute="top" secondItem="NTk-DJ-eKr" secondAttribute="bottom" constant="5" id="LZP-4k-Zfb"/>
+                    <constraint firstItem="iSz-6W-I38" firstAttribute="top" secondItem="XWs-wU-vTh" secondAttribute="bottom" constant="5" id="Pct-8r-7xo"/>
+                    <constraint firstItem="NTk-DJ-eKr" firstAttribute="leading" secondItem="Ihv-la-bwB" secondAttribute="trailing" constant="15" id="SKn-IB-f5x"/>
+                    <constraint firstItem="UqM-Oe-yjQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="UpS-It-Uyy"/>
+                    <constraint firstItem="2XO-Ma-g5P" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="Wh2-16-wnw"/>
+                    <constraint firstItem="NTk-DJ-eKr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="ZS9-nl-ca3"/>
+                    <constraint firstAttribute="trailing" secondItem="XWs-wU-vTh" secondAttribute="trailing" constant="15" id="e5E-0P-U9P"/>
+                    <constraint firstAttribute="bottom" secondItem="UqM-Oe-yjQ" secondAttribute="bottom" id="f6K-cm-fPq"/>
+                    <constraint firstItem="Ihv-la-bwB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="xS4-Rb-dRb"/>
+                    <constraint firstAttribute="trailing" secondItem="UqM-Oe-yjQ" secondAttribute="trailing" id="yCw-FC-n2m"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="issueTextLabel" destination="XWs-wU-vTh" id="tqv-Yd-jjl"/>
+                <outlet property="nameLabel" destination="NTk-DJ-eKr" id="EAX-R0-euG"/>
+                <outlet property="profileImageView" destination="Ihv-la-bwB" id="I2K-b3-eDW"/>
+                <outlet property="tagView" destination="iSz-6W-I38" id="bsz-Mx-5ey"/>
+                <outlet property="timeLabel" destination="2XO-Ma-g5P" id="mFa-af-t19"/>
+            </connections>
+            <point key="canvasLocation" x="-95" y="83"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="jindra" width="600" height="600"/>
+    </resources>
+</document>
