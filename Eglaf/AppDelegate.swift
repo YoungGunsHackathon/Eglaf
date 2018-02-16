@@ -24,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = TabBarViewController()
         window?.makeKeyAndVisible()
         
+        UIApplication.shared.statusBarStyle = .lightContent
+        
         return true
     }
 
