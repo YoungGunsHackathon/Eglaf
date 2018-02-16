@@ -24,6 +24,7 @@
 		E391AD7A2036D85A002B5FF4 /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E391AD792036D85A002B5FF4 /* QRViewController.swift */; };
 		E391AD7D2036D8C0002B5FF4 /* StoryboardInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E391AD7C2036D8C0002B5FF4 /* StoryboardInit.swift */; };
 		E391AD7F2036D91D002B5FF4 /* QRViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E391AD7E2036D91D002B5FF4 /* QRViewController.storyboard */; };
+		E391AD852036E748002B5FF4 /* OKAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E391AD842036E748002B5FF4 /* OKAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		E391AD792036D85A002B5FF4 /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		E391AD7C2036D8C0002B5FF4 /* StoryboardInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInit.swift; sourceTree = "<group>"; };
 		E391AD7E2036D91D002B5FF4 /* QRViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRViewController.storyboard; sourceTree = "<group>"; };
+		E391AD842036E748002B5FF4 /* OKAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OKAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				E391AD7C2036D8C0002B5FF4 /* StoryboardInit.swift */,
+				E391AD842036E748002B5FF4 /* OKAlert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 			files = (
 				C5ABD98520364F6000FA5E75 /* ViewController.swift in Sources */,
 				E391AD7A2036D85A002B5FF4 /* QRViewController.swift in Sources */,
+				E391AD852036E748002B5FF4 /* OKAlert.swift in Sources */,
 				E391AD7D2036D8C0002B5FF4 /* StoryboardInit.swift in Sources */,
 				C5ABD9A0203653E300FA5E75 /* Ticket.swift in Sources */,
 				C58BD0F12036DA1C004CEF79 /* Utils.swift in Sources */,
@@ -473,10 +477,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V3MA6M9H6Q;
+				DEVELOPMENT_TEAM = 98Y9HY82MU;
 				INFOPLIST_FILE = Eglaf/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zvadaadam.Eglaf;
+				PRODUCT_BUNDLE_IDENTIFIER = zvadaada.EglafHackathon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -489,10 +494,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V3MA6M9H6Q;
+				DEVELOPMENT_TEAM = 98Y9HY82MU;
 				INFOPLIST_FILE = Eglaf/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zvadaadam.Eglaf;
+				PRODUCT_BUNDLE_IDENTIFIER = zvadaada.EglafHackathon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
