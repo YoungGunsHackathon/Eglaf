@@ -10,7 +10,8 @@ import Foundation
 import ReactiveSwift
 
 protocol EventAPIServicing {
-    func getTickets(eventId: String) -> SignalProducer<[Ticket],RequestError>
+    func getTickets(eventId: String) -> SignalProducer<Tickets?, RequestError>
+    //func getTicketArray(eventId: String) -> SignalProducer<[Ticket], RequestError>
 }
 
 
@@ -25,27 +26,22 @@ class EventAPIService : APIService, EventAPIServicing {
         return relativeURL
     }
     
-    func getTickets(eventId: String) -> SignalProducer<[Ticket], RequestError> {
+//    func getTicketArray(eventId: String) -> SignalProducer<Tickets?, RequestError> {
+//
+//
+//
+//    }
+    
+    func getTickets(eventId: String) -> SignalProducer<Tickets?, RequestError> {
         return self.request("\(eventId)")
             .mapError { .network($0) }
             .map{ (data: Any?) in
-                var tickets: Tickets
-                var ticketArray : [Ticket] = []
+                var tickets: Tickets?
                 
                 if let value = data as? [String : Any] {
                     tickets = Tickets(dictionary: value)
                 }
-                
-                if let array = data as? [[String : Any]] {
-                    array.forEach(
-                        { (dictionary) in
-                            let ticket = Ticket(dictionary: dictionary)
-                            //ticket.setValuesForKeys(dictionary)
-                            tickets.append(ticket)
-                        }
-                    )
-                }
-                
+
                 return tickets
         }
     }

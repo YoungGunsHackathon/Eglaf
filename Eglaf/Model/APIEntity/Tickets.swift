@@ -9,13 +9,18 @@
 import Foundation
 
 class Tickets: NSObject {
+    var tickets: [Ticket]?
     var lastStamp: String?
-    var tickets: [String: Any]?
     
     init(dictionary: [String : Any]) {
         super.init()
-        dictionary.forEach { (atr) in
-            self.setValue(atr.value, forKey: atr.key)
+        
+        if let tickets = dictionary["tickets"] as? [Ticket] {
+            self.tickets = tickets
+        }
+
+        if let lastStamp = dictionary["lastStamp"] as? String {
+            self.lastStamp = lastStamp
         }
     }
 }

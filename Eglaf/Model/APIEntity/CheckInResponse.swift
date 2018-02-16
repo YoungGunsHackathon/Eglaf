@@ -14,8 +14,13 @@ class CheckInResponse: NSObject {
     
     init(dictionary: [String : Any]) {
         super.init()
-        dictionary.forEach { (atr) in
-            self.setValue(atr.value, forKey: atr.key)
+        
+        if let result = dictionary["result"] as? String {
+            self.result = result
+        }
+        
+        if let checkedAt = dictionary["checkedAt"] as? String {
+            self.checkedAt = checkedAt
         }
     }
 }

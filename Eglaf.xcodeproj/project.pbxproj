@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		89A54A66A97849A20AB24C1D /* Pods_Eglaf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4AEC96CDBD5121082E977F /* Pods_Eglaf.framework */; };
 		C58BD0F12036DA1C004CEF79 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58BD0F02036DA1C004CEF79 /* Utils.swift */; };
+		C58BD0F72036F723004CEF79 /* DBProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58BD0F62036F723004CEF79 /* DBProvider.swift */; };
+		C58BD0FA2036F7A4004CEF79 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58BD0F92036F7A4004CEF79 /* Constants.swift */; };
+		C58BD0FD2036FA9D004CEF79 /* UserHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58BD0FC2036FA9D004CEF79 /* UserHandler.swift */; };
+		C58BD0FF2036FAAA004CEF79 /* IssueHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58BD0FE2036FAAA004CEF79 /* IssueHandler.swift */; };
+		C58BD1012036FB15004CEF79 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58BD1002036FB15004CEF79 /* User.swift */; };
+		C58BD1032036FB20004CEF79 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58BD1022036FB20004CEF79 /* Issue.swift */; };
 		C5ABD98320364F6000FA5E75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABD98220364F6000FA5E75 /* AppDelegate.swift */; };
 		C5ABD98520364F6000FA5E75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABD98420364F6000FA5E75 /* ViewController.swift */; };
 		C5ABD98820364F6000FA5E75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5ABD98620364F6000FA5E75 /* Main.storyboard */; };
@@ -20,7 +26,17 @@
 		C5ABD9A0203653E300FA5E75 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABD99F203653E300FA5E75 /* Ticket.swift */; };
 		C5ABD9A2203653EE00FA5E75 /* Tickets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABD9A1203653EE00FA5E75 /* Tickets.swift */; };
 		C5ABD9A42036627900FA5E75 /* CheckInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABD9A32036627900FA5E75 /* CheckInResponse.swift */; };
-		C5ABD9A72036645300FA5E75 /* TapBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5ABD9A62036645300FA5E75 /* TapBar.storyboard */; };
+		C5CCCA0E203721D1009756BB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5CCCA0D203721D0009756BB /* GoogleService-Info.plist */; };
+		C5CCCA1020373FEA009756BB /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CCCA0F20373FEA009756BB /* UIImageView+Extension.swift */; };
+		E306B7F920371F5E00CE5483 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E306B7F820371F5E00CE5483 /* HomeViewController.storyboard */; };
+		E306B7FB20371F6800CE5483 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E306B7FA20371F6800CE5483 /* HomeViewController.swift */; };
+		E306B7FD2037208100CE5483 /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E306B7FC2037208100CE5483 /* ProfileViewController.storyboard */; };
+		E306B7FF2037208E00CE5483 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E306B7FE2037208E00CE5483 /* ProfileViewController.swift */; };
+		E391AD782036D80D002B5FF4 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E391AD772036D80D002B5FF4 /* TabBarViewController.swift */; };
+		E391AD7A2036D85A002B5FF4 /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E391AD792036D85A002B5FF4 /* QRViewController.swift */; };
+		E391AD7D2036D8C0002B5FF4 /* StoryboardInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E391AD7C2036D8C0002B5FF4 /* StoryboardInit.swift */; };
+		E391AD7F2036D91D002B5FF4 /* QRViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E391AD7E2036D91D002B5FF4 /* QRViewController.storyboard */; };
+		E391AD852036E748002B5FF4 /* OKAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E391AD842036E748002B5FF4 /* OKAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +44,12 @@
 		A24EE61D0BA474179EE90ED8 /* Pods-Eglaf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eglaf.release.xcconfig"; path = "Pods/Target Support Files/Pods-Eglaf/Pods-Eglaf.release.xcconfig"; sourceTree = "<group>"; };
 		BC4AEC96CDBD5121082E977F /* Pods_Eglaf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eglaf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C58BD0F02036DA1C004CEF79 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		C58BD0F62036F723004CEF79 /* DBProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBProvider.swift; sourceTree = "<group>"; };
+		C58BD0F92036F7A4004CEF79 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C58BD0FC2036FA9D004CEF79 /* UserHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHandler.swift; sourceTree = "<group>"; };
+		C58BD0FE2036FAAA004CEF79 /* IssueHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueHandler.swift; sourceTree = "<group>"; };
+		C58BD1002036FB15004CEF79 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C58BD1022036FB20004CEF79 /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
 		C5ABD97F20364F6000FA5E75 /* Eglaf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eglaf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5ABD98220364F6000FA5E75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5ABD98420364F6000FA5E75 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,7 +63,17 @@
 		C5ABD99F203653E300FA5E75 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		C5ABD9A1203653EE00FA5E75 /* Tickets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tickets.swift; sourceTree = "<group>"; };
 		C5ABD9A32036627900FA5E75 /* CheckInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInResponse.swift; sourceTree = "<group>"; };
-		C5ABD9A62036645300FA5E75 /* TapBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TapBar.storyboard; sourceTree = "<group>"; };
+		C5CCCA0D203721D0009756BB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C5CCCA0F20373FEA009756BB /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		E306B7F820371F5E00CE5483 /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
+		E306B7FA20371F6800CE5483 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E306B7FC2037208100CE5483 /* ProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
+		E306B7FE2037208E00CE5483 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E391AD772036D80D002B5FF4 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		E391AD792036D85A002B5FF4 /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
+		E391AD7C2036D8C0002B5FF4 /* StoryboardInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInit.swift; sourceTree = "<group>"; };
+		E391AD7E2036D91D002B5FF4 /* QRViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRViewController.storyboard; sourceTree = "<group>"; };
+		E391AD842036E748002B5FF4 /* OKAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OKAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +121,41 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		C58BD0F22036E957004CEF79 /* DatabaseEntity */ = {
+			isa = PBXGroup;
+			children = (
+				C58BD1002036FB15004CEF79 /* User.swift */,
+				C58BD1022036FB20004CEF79 /* Issue.swift */,
+			);
+			path = DatabaseEntity;
+			sourceTree = "<group>";
+		};
+		C58BD0F32036F38C004CEF79 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				C58BD0F62036F723004CEF79 /* DBProvider.swift */,
+				C58BD0FB2036FA53004CEF79 /* Handler */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		C58BD0F82036F790004CEF79 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C58BD0F92036F7A4004CEF79 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		C58BD0FB2036FA53004CEF79 /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				C58BD0FC2036FA9D004CEF79 /* UserHandler.swift */,
+				C58BD0FE2036FAAA004CEF79 /* IssueHandler.swift */,
+			);
+			path = Handler;
+			sourceTree = "<group>";
+		};
 		C5ABD97620364F6000FA5E75 = {
 			isa = PBXGroup;
 			children = (
@@ -110,15 +177,18 @@
 		C5ABD98120364F6000FA5E75 /* Eglaf */ = {
 			isa = PBXGroup;
 			children = (
-				C58BD0EF2036DA0A004CEF79 /* Utils */,
-				C5ABD9A52036643200FA5E75 /* Storyboard */,
+				C5ABD99420364F6E00FA5E75 /* Networking */,
 				C5ABD99620364F8F00FA5E75 /* Model */,
 				C5ABD99520364F8400FA5E75 /* Controller */,
-				C5ABD99420364F6E00FA5E75 /* Networking */,
+				C5ABD9A52036643200FA5E75 /* Storyboard */,
+				C58BD0EF2036DA0A004CEF79 /* Utils */,
+				C58BD0F82036F790004CEF79 /* Constants */,
+				E391AD7B2036D8B1002B5FF4 /* Extensions */,
 				C5ABD98220364F6000FA5E75 /* AppDelegate.swift */,
 				C5ABD98920364F6000FA5E75 /* Assets.xcassets */,
 				C5ABD98B20364F6000FA5E75 /* LaunchScreen.storyboard */,
 				C5ABD98E20364F6000FA5E75 /* Info.plist */,
+				C5CCCA0D203721D0009756BB /* GoogleService-Info.plist */,
 			);
 			path = Eglaf;
 			sourceTree = "<group>";
@@ -126,6 +196,7 @@
 		C5ABD99420364F6E00FA5E75 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				C58BD0F32036F38C004CEF79 /* Firebase */,
 				C58BD0EE2036D93F004CEF79 /* Service */,
 				C5ABD9972036510900FA5E75 /* APIService.swift */,
 				C5ABD9992036511800FA5E75 /* Network.swift */,
@@ -137,6 +208,10 @@
 			isa = PBXGroup;
 			children = (
 				C5ABD98420364F6000FA5E75 /* ViewController.swift */,
+				E391AD772036D80D002B5FF4 /* TabBarViewController.swift */,
+				E391AD792036D85A002B5FF4 /* QRViewController.swift */,
+				E306B7FA20371F6800CE5483 /* HomeViewController.swift */,
+				E306B7FE2037208E00CE5483 /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -144,6 +219,7 @@
 		C5ABD99620364F8F00FA5E75 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C58BD0F22036E957004CEF79 /* DatabaseEntity */,
 				C5ABD99E203652CF00FA5E75 /* APIEntity */,
 			);
 			path = Model;
@@ -163,9 +239,21 @@
 			isa = PBXGroup;
 			children = (
 				C5ABD98620364F6000FA5E75 /* Main.storyboard */,
-				C5ABD9A62036645300FA5E75 /* TapBar.storyboard */,
+				E391AD7E2036D91D002B5FF4 /* QRViewController.storyboard */,
+				E306B7F820371F5E00CE5483 /* HomeViewController.storyboard */,
+				E306B7FC2037208100CE5483 /* ProfileViewController.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		E391AD7B2036D8B1002B5FF4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E391AD7C2036D8C0002B5FF4 /* StoryboardInit.swift */,
+				E391AD842036E748002B5FF4 /* OKAlert.swift */,
+				C5CCCA0F20373FEA009756BB /* UIImageView+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +319,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5ABD98D20364F6000FA5E75 /* LaunchScreen.storyboard in Resources */,
+				E306B7FD2037208100CE5483 /* ProfileViewController.storyboard in Resources */,
+				E391AD7F2036D91D002B5FF4 /* QRViewController.storyboard in Resources */,
+				E306B7F920371F5E00CE5483 /* HomeViewController.storyboard in Resources */,
+				C5CCCA0E203721D1009756BB /* GoogleService-Info.plist in Resources */,
 				C5ABD98A20364F6000FA5E75 /* Assets.xcassets in Resources */,
-				C5ABD9A72036645300FA5E75 /* TapBar.storyboard in Resources */,
 				C5ABD98820364F6000FA5E75 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,18 +339,26 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Eglaf/Pods-Eglaf-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Reqres/Reqres.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reqres.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -306,15 +405,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5CCCA1020373FEA009756BB /* UIImageView+Extension.swift in Sources */,
 				C5ABD98520364F6000FA5E75 /* ViewController.swift in Sources */,
+				C58BD0F72036F723004CEF79 /* DBProvider.swift in Sources */,
+				E391AD7A2036D85A002B5FF4 /* QRViewController.swift in Sources */,
+				E391AD852036E748002B5FF4 /* OKAlert.swift in Sources */,
+				E391AD7D2036D8C0002B5FF4 /* StoryboardInit.swift in Sources */,
+				C58BD0FF2036FAAA004CEF79 /* IssueHandler.swift in Sources */,
 				C5ABD9A0203653E300FA5E75 /* Ticket.swift in Sources */,
 				C58BD0F12036DA1C004CEF79 /* Utils.swift in Sources */,
+				C58BD1012036FB15004CEF79 /* User.swift in Sources */,
 				C5ABD9982036510900FA5E75 /* APIService.swift in Sources */,
+				C58BD0FD2036FA9D004CEF79 /* UserHandler.swift in Sources */,
 				C5ABD99D2036515200FA5E75 /* EventAPIService.swift in Sources */,
+				E391AD782036D80D002B5FF4 /* TabBarViewController.swift in Sources */,
 				C5ABD9A42036627900FA5E75 /* CheckInResponse.swift in Sources */,
 				C5ABD99A2036511800FA5E75 /* Network.swift in Sources */,
+				E306B7FB20371F6800CE5483 /* HomeViewController.swift in Sources */,
+				C58BD0FA2036F7A4004CEF79 /* Constants.swift in Sources */,
 				C5ABD98320364F6000FA5E75 /* AppDelegate.swift in Sources */,
+				E306B7FF2037208E00CE5483 /* ProfileViewController.swift in Sources */,
 				C5ABD9A2203653EE00FA5E75 /* Tickets.swift in Sources */,
+				C58BD1032036FB20004CEF79 /* Issue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,12 +564,15 @@
 			baseConfigurationReference = 50457889FDFFB3E2B70C7C7D /* Pods-Eglaf.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V3MA6M9H6Q;
+				DEVELOPMENT_TEAM = 98Y9HY82MU;
 				INFOPLIST_FILE = Eglaf/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zvadaadam.Eglaf;
+				PRODUCT_BUNDLE_IDENTIFIER = zvadaada.Eglaf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -468,12 +583,15 @@
 			baseConfigurationReference = A24EE61D0BA474179EE90ED8 /* Pods-Eglaf.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V3MA6M9H6Q;
+				DEVELOPMENT_TEAM = 98Y9HY82MU;
 				INFOPLIST_FILE = Eglaf/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zvadaadam.Eglaf;
+				PRODUCT_BUNDLE_IDENTIFIER = zvadaada.Eglaf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

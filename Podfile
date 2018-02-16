@@ -9,6 +9,9 @@ target 'Eglaf' do
 	pod 'ReactiveSwift'
 	pod 'Alamofire'
 	pod 'Reqres'
+	pod 'Firebase/Core'
+	pod 'Firebase/Database'
+	pod 'Firebase/Storage'	
 
   # Pods for Eglaf
 

@@ -9,14 +9,23 @@
 import Foundation
 
 class Ticket : NSObject {
-    var id: String?
+    var ticketId: String?
     var name: String?
     var checkedAt: String?
     
     init(dictionary: [String : Any]) {
         super.init()
-        dictionary.forEach { (atr) in
-            self.setValue(atr.value, forKey: atr.key)
+
+        if let ticketId = dictionary["tickeId"] as? String {
+            self.ticketId = ticketId
+        }
+
+        if let name = dictionary["name"] as? String {
+            self.name = name
+        }
+        
+        if let checkedAt = dictionary["checkedAt"] as? String {
+            self.checkedAt = checkedAt
         }
     }
 }
