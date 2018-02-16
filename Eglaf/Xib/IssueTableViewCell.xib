@@ -102,6 +102,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="categoryLabel" destination="0v3-UQ-fuk" id="X1C-Vs-sZX"/>
                 <outlet property="issueTextLabel" destination="XWs-wU-vTh" id="tqv-Yd-jjl"/>
                 <outlet property="nameLabel" destination="NTk-DJ-eKr" id="EAX-R0-euG"/>
                 <outlet property="profileImageView" destination="Ihv-la-bwB" id="I2K-b3-eDW"/>

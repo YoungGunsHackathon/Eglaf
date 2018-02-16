@@ -14,3 +14,13 @@ enum State {
     case ready
     case error
 }
+
+struct Utils {
+    
+    public static func getMinutes(timestamp: String) -> Int {
+        let createTime = Date(timeIntervalSince1970: TimeInterval(timestamp)!)
+        let elapsedTime = NSDate().timeIntervalSince(createTime)
+        
+        return Int(elapsedTime/60)
+    }
+}

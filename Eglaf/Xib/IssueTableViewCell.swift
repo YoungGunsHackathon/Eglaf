@@ -15,6 +15,8 @@ class IssueTableViewCell: UITableViewCell {
     @IBOutlet weak var issueTextLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var tagView: UIView!
+    @IBOutlet weak var categoryLabel: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
