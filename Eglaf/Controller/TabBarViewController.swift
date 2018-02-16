@@ -15,6 +15,8 @@ class TabBarViewController: UITabBarController {
     
     var controllers = [UIViewController]()
     let qrViewController = QRViewController.storyboardInit()
+    let homeViewController = HomeViewController.storyboardInit()
+    let profileViewController = ProfileViewController.storyboardInit()
     
     //MARK: Life Cycle
     
@@ -26,9 +28,16 @@ class TabBarViewController: UITabBarController {
 
 extension TabBarViewController {
     func prepareTabBar() {
+        homeViewController.tabBarItem = UITabBarItem(title: nil, image: #imageLiteral(resourceName: "dashboard"), selectedImage: nil)
+        homeViewController.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
         qrViewController.tabBarItem = UITabBarItem(title: nil, image: #imageLiteral(resourceName: "scan"), selectedImage: nil)
         qrViewController.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
+        profileViewController.tabBarItem = UITabBarItem(title: nil, image: #imageLiteral(resourceName: "profile"), selectedImage: nil)
+        profileViewController.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
+        
+        controllers.append(homeViewController)
         controllers.append(qrViewController)
+        controllers.append(profileViewController)
         
         controllers = controllers.map { UINavigationController(rootViewController: $0)}
         self.setViewControllers(controllers, animated: false)
