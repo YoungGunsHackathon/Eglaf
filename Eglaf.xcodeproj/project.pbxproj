@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		89A54A66A97849A20AB24C1D /* Pods_Eglaf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4AEC96CDBD5121082E977F /* Pods_Eglaf.framework */; };
 		C58BD0F12036DA1C004CEF79 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58BD0F02036DA1C004CEF79 /* Utils.swift */; };
+		C58BD0F52036F675004CEF79 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C58BD0F42036F675004CEF79 /* GoogleService-Info.plist */; };
+		C58BD0F72036F723004CEF79 /* DBProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58BD0F62036F723004CEF79 /* DBProvider.swift */; };
+		C58BD0FA2036F7A4004CEF79 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58BD0F92036F7A4004CEF79 /* Constants.swift */; };
+		C58BD0FD2036FA9D004CEF79 /* UserHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58BD0FC2036FA9D004CEF79 /* UserHandler.swift */; };
+		C58BD0FF2036FAAA004CEF79 /* IssueHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58BD0FE2036FAAA004CEF79 /* IssueHandler.swift */; };
+		C58BD1012036FB15004CEF79 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58BD1002036FB15004CEF79 /* User.swift */; };
+		C58BD1032036FB20004CEF79 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58BD1022036FB20004CEF79 /* Issue.swift */; };
 		C5ABD98320364F6000FA5E75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABD98220364F6000FA5E75 /* AppDelegate.swift */; };
 		C5ABD98520364F6000FA5E75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABD98420364F6000FA5E75 /* ViewController.swift */; };
 		C5ABD98820364F6000FA5E75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5ABD98620364F6000FA5E75 /* Main.storyboard */; };
@@ -31,6 +38,13 @@
 		A24EE61D0BA474179EE90ED8 /* Pods-Eglaf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eglaf.release.xcconfig"; path = "Pods/Target Support Files/Pods-Eglaf/Pods-Eglaf.release.xcconfig"; sourceTree = "<group>"; };
 		BC4AEC96CDBD5121082E977F /* Pods_Eglaf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eglaf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C58BD0F02036DA1C004CEF79 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		C58BD0F42036F675004CEF79 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C58BD0F62036F723004CEF79 /* DBProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBProvider.swift; sourceTree = "<group>"; };
+		C58BD0F92036F7A4004CEF79 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C58BD0FC2036FA9D004CEF79 /* UserHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHandler.swift; sourceTree = "<group>"; };
+		C58BD0FE2036FAAA004CEF79 /* IssueHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueHandler.swift; sourceTree = "<group>"; };
+		C58BD1002036FB15004CEF79 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C58BD1022036FB20004CEF79 /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
 		C5ABD97F20364F6000FA5E75 /* Eglaf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eglaf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5ABD98220364F6000FA5E75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5ABD98420364F6000FA5E75 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,8 +112,36 @@
 		C58BD0F22036E957004CEF79 /* DatabaseEntity */ = {
 			isa = PBXGroup;
 			children = (
+				C58BD1002036FB15004CEF79 /* User.swift */,
+				C58BD1022036FB20004CEF79 /* Issue.swift */,
 			);
 			path = DatabaseEntity;
+			sourceTree = "<group>";
+		};
+		C58BD0F32036F38C004CEF79 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				C58BD0F62036F723004CEF79 /* DBProvider.swift */,
+				C58BD0FB2036FA53004CEF79 /* Handler */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		C58BD0F82036F790004CEF79 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C58BD0F92036F7A4004CEF79 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		C58BD0FB2036FA53004CEF79 /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				C58BD0FC2036FA9D004CEF79 /* UserHandler.swift */,
+				C58BD0FE2036FAAA004CEF79 /* IssueHandler.swift */,
+			);
+			path = Handler;
 			sourceTree = "<group>";
 		};
 		C5ABD97620364F6000FA5E75 = {
@@ -123,16 +165,18 @@
 		C5ABD98120364F6000FA5E75 /* Eglaf */ = {
 			isa = PBXGroup;
 			children = (
-				C58BD0EF2036DA0A004CEF79 /* Utils */,
-				C5ABD9A52036643200FA5E75 /* Storyboard */,
+				C5ABD99420364F6E00FA5E75 /* Networking */,
 				C5ABD99620364F8F00FA5E75 /* Model */,
 				C5ABD99520364F8400FA5E75 /* Controller */,
-				C5ABD99420364F6E00FA5E75 /* Networking */,
+				C5ABD9A52036643200FA5E75 /* Storyboard */,
+				C58BD0EF2036DA0A004CEF79 /* Utils */,
+				C58BD0F82036F790004CEF79 /* Constants */,
 				E391AD7B2036D8B1002B5FF4 /* Extensions */,
 				C5ABD98220364F6000FA5E75 /* AppDelegate.swift */,
 				C5ABD98920364F6000FA5E75 /* Assets.xcassets */,
 				C5ABD98B20364F6000FA5E75 /* LaunchScreen.storyboard */,
 				C5ABD98E20364F6000FA5E75 /* Info.plist */,
+				C58BD0F42036F675004CEF79 /* GoogleService-Info.plist */,
 			);
 			path = Eglaf;
 			sourceTree = "<group>";
@@ -140,6 +184,7 @@
 		C5ABD99420364F6E00FA5E75 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				C58BD0F32036F38C004CEF79 /* Firebase */,
 				C58BD0EE2036D93F004CEF79 /* Service */,
 				C5ABD9972036510900FA5E75 /* APIService.swift */,
 				C5ABD9992036511800FA5E75 /* Network.swift */,
@@ -257,6 +302,7 @@
 			files = (
 				C5ABD98D20364F6000FA5E75 /* LaunchScreen.storyboard in Resources */,
 				E391AD7F2036D91D002B5FF4 /* QRViewController.storyboard in Resources */,
+				C58BD0F52036F675004CEF79 /* GoogleService-Info.plist in Resources */,
 				C5ABD98A20364F6000FA5E75 /* Assets.xcassets in Resources */,
 				C5ABD98820364F6000FA5E75 /* Main.storyboard in Resources */,
 			);
@@ -273,18 +319,26 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Eglaf/Pods-Eglaf-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Reqres/Reqres.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reqres.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -332,17 +386,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5ABD98520364F6000FA5E75 /* ViewController.swift in Sources */,
+				C58BD0F72036F723004CEF79 /* DBProvider.swift in Sources */,
 				E391AD7A2036D85A002B5FF4 /* QRViewController.swift in Sources */,
 				E391AD7D2036D8C0002B5FF4 /* StoryboardInit.swift in Sources */,
+				C58BD0FF2036FAAA004CEF79 /* IssueHandler.swift in Sources */,
 				C5ABD9A0203653E300FA5E75 /* Ticket.swift in Sources */,
 				C58BD0F12036DA1C004CEF79 /* Utils.swift in Sources */,
+				C58BD1012036FB15004CEF79 /* User.swift in Sources */,
 				C5ABD9982036510900FA5E75 /* APIService.swift in Sources */,
+				C58BD0FD2036FA9D004CEF79 /* UserHandler.swift in Sources */,
 				C5ABD99D2036515200FA5E75 /* EventAPIService.swift in Sources */,
 				E391AD782036D80D002B5FF4 /* TabBarViewController.swift in Sources */,
 				C5ABD9A42036627900FA5E75 /* CheckInResponse.swift in Sources */,
 				C5ABD99A2036511800FA5E75 /* Network.swift in Sources */,
+				C58BD0FA2036F7A4004CEF79 /* Constants.swift in Sources */,
 				C5ABD98320364F6000FA5E75 /* AppDelegate.swift in Sources */,
 				C5ABD9A2203653EE00FA5E75 /* Tickets.swift in Sources */,
+				C58BD1032036FB20004CEF79 /* Issue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
