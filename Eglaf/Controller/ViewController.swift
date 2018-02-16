@@ -13,7 +13,7 @@ class ViewController: UIViewController {
 
     let apiEvent = EventAPIService(network: Network(), authHandler: nil)
     
-    var tickets: [Ticket] = []
+    var tickets: Tickets?
     var state: State = .empty {
         didSet {
             if state != oldValue {
@@ -27,11 +27,9 @@ class ViewController: UIViewController {
         
         getTickets()
         
-        for ticket in tickets {
-            print(ticket)
-        }
+        print(tickets)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -41,9 +39,13 @@ class ViewController: UIViewController {
         
         apiEvent.getTickets(eventId: "cc6c6fad-8047-4084-9aca-d7be1ee06c92eve").startWithResult { (result) in
             if case .success(let value) = result {
-                self.tickets = value
-                self.state = value.isEmpty ? .empty : .ready
-                //self.delegate?.updateRecipes(items: value)
+                if let data = value {
+                    self.tickets = data
+                    self.state = .ready
+                } else {
+                    self.state = .empty
+                    print("--- No Data ----")
+                }
             }
             
             if case .failure(let error) = result {
@@ -51,7 +53,6 @@ class ViewController: UIViewController {
                 print(error)
             }
         }
-        
+    
     }
 }
-

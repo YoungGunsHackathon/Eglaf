@@ -95,6 +95,13 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		C58BD0F22036E957004CEF79 /* DatabaseEntity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DatabaseEntity;
+			sourceTree = "<group>";
+		};
 		C5ABD97620364F6000FA5E75 = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +160,7 @@
 		C5ABD99620364F8F00FA5E75 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C58BD0F22036E957004CEF79 /* DatabaseEntity */,
 				C5ABD99E203652CF00FA5E75 /* APIEntity */,
 			);
 			path = Model;
