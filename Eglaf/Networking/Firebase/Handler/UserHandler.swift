@@ -10,10 +10,12 @@ import Foundation
 
 class UserHandler {
     
+    
+    
     static let sharedInstance = UserHandler()
     
     
-    func addUser() {
+    func addUser(user: User) {
         
     }
 }
