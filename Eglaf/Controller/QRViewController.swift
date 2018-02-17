@@ -14,11 +14,28 @@ class QRViewController: UIViewController, StoryboardInit {
     
     //MARK: Properties
     
+    var responseView: ResponseView? {
+        willSet {
+            if let resView = responseView {
+                resView.removeFromSuperview()
+            }
+        }
+    }
     var tickets: Tickets?
     let apiEvent = EventAPIService(network: Network(), authHandler: nil)
+    var qrValue: String = "" {
+        didSet {
+            if qrValue != oldValue {
+                getTicketIDFrom(qrString: qrValue)
+            }
+        }
+    }
+    
     var captureSession = AVCaptureSession()
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var qrCodeFrameView = UIView()
+    
+    
     @IBOutlet weak var opacityView: UIView!
     
     //MARK: Outlets
@@ -29,8 +46,6 @@ class QRViewController: UIViewController, StoryboardInit {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //responseView.isHidden = true
         
         downloadTickets()
     }
@@ -166,9 +181,9 @@ extension QRViewController: AVCaptureMetadataOutputObjectsDelegate {
             //qrLabel.text = "QR contains no text"
             return
         }
-
-        self.captureSession.stopRunning()
-        getTicketIDFrom(qrString: qrString)
+        
+        self.qrValue = qrString
+        //getTicketIDFrom(qrString: qrString)
     }
 }
 
@@ -179,19 +194,13 @@ extension QRViewController {
         guard let url = URLComponents(string: qrString) else { return }
         let ticketID = url.queryItems?.first?.value
         //qrLabel.text = ticketID
+        
         guard let ticketIDUnwrapped = ticketID else {
-            showOKAlert(message: "Unrelevant QR Code!")
+            //showOKAlert(message: "Unrelevant QR Code!")
             return
         }
-        showTicketConfirmation(ticketID: ticketIDUnwrapped)
-    }
-    
-    func showTicketConfirmation(ticketID: String) {
-        if compareTicketID(ticketID: ticketID) {
-            //showOKAlert(message: "JE TAM BRASKO")
-        } else {
-            //showOKAlert(message: "BOHUZEL NIKDO NENI")
-        }
+        
+        compareTicketID(ticketID: ticketIDUnwrapped)
     }
     
     func compareTicketID(ticketID: String) -> Bool {
@@ -203,35 +212,42 @@ extension QRViewController {
                 matched = true
                 setCheckedTicket(eventId: "cc6c6fad-8047-4084-9aca-d7be1ee06c92eve", ticketId: ticketID, complition: { (checkInResponse) in
                     
-                    let responseView = ResponseView.instanceFromNib()
-                    responseView.conformResponse(name: ticket.name!)
-                    responseView.frame = CGRect(x: 0, y: 0, width: 240, height: 240)
-                    responseView.center = CGPoint(x: self.view.frame.width / 2.0, y: self.view.frame.height / 2.0)
-                    responseView.layer.cornerRadius = 43
-                    UIView.transition(with: self.view, duration: 0.5, options: [.transitionCrossDissolve], animations: {
-                        self.opacityView.isHidden = false
-                        self.view.bringSubview(toFront: self.opacityView)
-                        self.view.addSubview(responseView)
-                    }, completion: { _ in
-                        
-                    })
+                    self.showResponseView(isSucces: true, ticketName: ticket.name!)
+                    
                 })
             }
         }
         
         if !matched {
-            let responseView = ResponseView.instanceFromNib()
-            responseView.notConformResponse()
-            responseView.frame = CGRect(x: 0, y: 0, width: 240, height: 240)
-            responseView.center = CGPoint(x: self.view.frame.width / 2.0, y: self.view.frame.height / 2.0)
-            responseView.layer.cornerRadius = 43
-            UIView.transition(with: self.view, duration: 0.5, options: [.transitionCrossDissolve], animations: {
-                self.opacityView.isHidden = false
-                self.view.bringSubview(toFront: self.opacityView)
-                self.view.addSubview(responseView)
-            }, completion: nil)
+            self.showResponseView(isSucces: false, ticketName: "")
         }
         
         return matched
+    }
+    
+    @objc func closeResponseView() {
+        UIView.transition(with: self.view, duration: 0.4, options: [.transitionCrossDissolve], animations: {
+            self.responseView!.removeFromSuperview()
+            self.opacityView.isHidden = true
+        }, completion: nil)
+        
+        self.qrValue = ""
+    }
+    
+    func showResponseView(isSucces: Bool, ticketName: String) {
+        
+        let resView = ResponseView.instanceFromNib()
+        resView.button.addTarget(self, action: #selector(closeResponseView), for: .touchUpInside)
+        isSucces ? resView.conformResponse(name: ticketName) : resView.notConformResponse()
+        resView.frame = CGRect(x: 0, y: 0, width: 240, height: 240)
+        resView.center = CGPoint(x: self.view.frame.width / 2.0, y: self.view.frame.height / 2.0)
+        resView.layer.cornerRadius = 43
+        UIView.transition(with: self.view, duration: 0.5, options: [.transitionCrossDissolve], animations: {
+            self.opacityView.isHidden = false
+            self.view.bringSubview(toFront: self.opacityView)
+            self.view.addSubview(resView)
+        }, completion: nil)
+        
+        self.responseView = resView
     }
 }
