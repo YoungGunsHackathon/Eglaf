@@ -36,6 +36,8 @@ class ReportViewController: UIViewController, StoryboardInit {
         collectionView.allowsMultipleSelection = false
         
         
+        descriptionField.becomeFirstResponder()
+        
         let normalTextAttributes: [AnyHashable : Any] = [
             NSAttributedStringKey.foregroundColor as NSObject: UIColor(red:0.35, green:0.43, blue:0.52, alpha:1),
             NSAttributedStringKey.font: UIFont(name: "SFProDisplay-Regular", size: 10)!
