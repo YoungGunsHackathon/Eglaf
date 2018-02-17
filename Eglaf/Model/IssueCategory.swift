@@ -16,6 +16,7 @@ enum IssueCategory: String {
     case security = "#SECURITY"
     case registration = "#REGISTRATION"
     case other = "#OTHER"
+    case all = "#ALL"
     
     var categoryColor: UIColor {
         switch self {
@@ -31,6 +32,8 @@ enum IssueCategory: String {
             return UIColor(red:0.35, green:0.43, blue:0.52, alpha:1)
         case .other:
             return UIColor(red:0.3, green:0.85, blue:0.39, alpha:1)
+        case .all:
+            return UIColor.white
         }
     }
 }
