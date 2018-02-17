@@ -122,7 +122,14 @@ extension HomeViewController: UITableViewDataSource {
         }
         
         if let category = issues[indexPath.row].category {
-            cell.categoryLabel.text = category
+            let string = "#\(category.uppercased())"
+            guard let categoryIssue = IssueCategory(rawValue: string) else {
+                cell.categoryLabel.text = "Unknown"
+                return cell
+            }
+            cell.categoryLabel.text = categoryIssue.rawValue
+            cell.categoryLabel.textColor = categoryIssue.categoryColor
+            cell.tagView.layer.borderColor = categoryIssue.categoryColor.cgColor
         }
         
         return cell

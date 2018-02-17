@@ -11,8 +11,8 @@ import UIKit
 
 enum IssueCategory: String {
     case catering = "#CATERING"
-    case scanning = "#SCANNING"
-    case infoPoint = "#INFO POINT"
+    case scanning = "#CHECK-IN"
+    case infoPoint = "#INFOPOINT"
     case security = "#SECURITY"
     case registration = "#REGISTRATION"
     case other = "#OTHER"
