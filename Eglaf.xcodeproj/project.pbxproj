@@ -31,6 +31,10 @@
 		C5CCCA1320379C5F009756BB /* ResponseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CCCA1220379C5F009756BB /* ResponseView.swift */; };
 		C5CCCA1520379CDB009756BB /* ResponseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5CCCA1420379CDB009756BB /* ResponseView.xib */; };
 		C5CCCA172037B0DF009756BB /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CCCA162037B0DF009756BB /* CustomView.swift */; };
+		C5CCCA192037EC4B009756BB /* GuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CCCA182037EC4B009756BB /* GuestViewController.swift */; };
+		C5CCCA1B2037ECA6009756BB /* GuestViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5CCCA1A2037ECA6009756BB /* GuestViewController.storyboard */; };
+		C5CCCA242037F0AD009756BB /* GuestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CCCA222037F0AD009756BB /* GuestTableViewCell.swift */; };
+		C5CCCA252037F0AD009756BB /* GuestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5CCCA232037F0AD009756BB /* GuestTableViewCell.xib */; };
 		E306B7F920371F5E00CE5483 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E306B7F820371F5E00CE5483 /* HomeViewController.storyboard */; };
 		E306B7FB20371F6800CE5483 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E306B7FA20371F6800CE5483 /* HomeViewController.swift */; };
 		E306B7FD2037208100CE5483 /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E306B7FC2037208100CE5483 /* ProfileViewController.storyboard */; };
@@ -88,6 +92,10 @@
 		C5CCCA1220379C5F009756BB /* ResponseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseView.swift; sourceTree = "<group>"; };
 		C5CCCA1420379CDB009756BB /* ResponseView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResponseView.xib; sourceTree = "<group>"; };
 		C5CCCA162037B0DF009756BB /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		C5CCCA182037EC4B009756BB /* GuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestViewController.swift; sourceTree = "<group>"; };
+		C5CCCA1A2037ECA6009756BB /* GuestViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GuestViewController.storyboard; sourceTree = "<group>"; };
+		C5CCCA222037F0AD009756BB /* GuestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestTableViewCell.swift; sourceTree = "<group>"; };
+		C5CCCA232037F0AD009756BB /* GuestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuestTableViewCell.xib; sourceTree = "<group>"; };
 		E306B7F820371F5E00CE5483 /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
 		E306B7FA20371F6800CE5483 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E306B7FC2037208100CE5483 /* ProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
@@ -259,6 +267,7 @@
 				E37A2BCD20375D4A006A3F7D /* ReportViewController.swift */,
 				E37A2BD92037ABB3006A3F7D /* FilterViewController.swift */,
 				E3B045772037D55C005D4E10 /* SplashViewController.swift */,
+				C5CCCA182037EC4B009756BB /* GuestViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -293,6 +302,7 @@
 				E37A2BCB20375D31006A3F7D /* ReportViewController.storyboard */,
 				E37A2BD72037ABA8006A3F7D /* FilterViewController.storyboard */,
 				E3B045752037D550005D4E10 /* SplashViewController.storyboard */,
+				C5CCCA1A2037ECA6009756BB /* GuestViewController.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -316,6 +326,8 @@
 				E37A2BD0203760C2006A3F7D /* CategoryCollectionViewCell.xib */,
 				E37A2BDB2037AE4F006A3F7D /* CategoryTableViewCell.swift */,
 				E37A2BDC2037AE4F006A3F7D /* CategoryTableViewCell.xib */,
+				C5CCCA222037F0AD009756BB /* GuestTableViewCell.swift */,
+				C5CCCA232037F0AD009756BB /* GuestTableViewCell.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -415,8 +427,10 @@
 				C5CCCA0E203721D1009756BB /* GoogleService-Info.plist in Resources */,
 				C5CCCA1520379CDB009756BB /* ResponseView.xib in Resources */,
 				E37A2BD82037ABA8006A3F7D /* FilterViewController.storyboard in Resources */,
+				C5CCCA252037F0AD009756BB /* GuestTableViewCell.xib in Resources */,
 				C5ABD98A20364F6000FA5E75 /* Assets.xcassets in Resources */,
 				E306B8462037276E00CE5483 /* SF-Pro-Display-Regular.otf in Resources */,
+				C5CCCA1B2037ECA6009756BB /* GuestViewController.storyboard in Resources */,
 				C5ABD98820364F6000FA5E75 /* Main.storyboard in Resources */,
 				E306B8472037276E00CE5483 /* SF-Pro-Display-Bold.otf in Resources */,
 			);
@@ -512,10 +526,12 @@
 				C58BD0FF2036FAAA004CEF79 /* IssueHandler.swift in Sources */,
 				C5ABD9A0203653E300FA5E75 /* Ticket.swift in Sources */,
 				C58BD0F12036DA1C004CEF79 /* Utils.swift in Sources */,
+				C5CCCA192037EC4B009756BB /* GuestViewController.swift in Sources */,
 				C58BD1012036FB15004CEF79 /* User.swift in Sources */,
 				E37A2BDA2037ABB3006A3F7D /* FilterViewController.swift in Sources */,
 				C5ABD9982036510900FA5E75 /* APIService.swift in Sources */,
 				C58BD0FD2036FA9D004CEF79 /* UserHandler.swift in Sources */,
+				C5CCCA242037F0AD009756BB /* GuestTableViewCell.swift in Sources */,
 				E37A2BDD2037AE4F006A3F7D /* CategoryTableViewCell.swift in Sources */,
 				C5ABD99D2036515200FA5E75 /* EventAPIService.swift in Sources */,
 				E391AD782036D80D002B5FF4 /* TabBarViewController.swift in Sources */,
