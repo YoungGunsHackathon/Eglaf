@@ -25,7 +25,9 @@ extension UIImageView {
                 }
                 
                 print("Size of retrived photos is \((data?.count)!/1024)KB")
-                self.image = UIImage(data: data!)
+                DispatchQueue.main.async {
+                    self.image = UIImage(data: data!)
+                }
             }).resume()
         }
         
