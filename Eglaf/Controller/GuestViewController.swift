@@ -102,6 +102,8 @@ extension GuestViewController: UITableViewDataSource {
         cell.time.text = ""
         
         //cell.time.text = tickets[indexPath.row].checkedAt
+        
+        
 //        if let date = Formatter.iso8601.date(from: tickets[indexPath.row].checkedAt!)  {
 //            let minutesAgo: Int = Utils.getMinutes(timestamp: String(format: "%.0f", date.timeIntervalSince1970))
 //
