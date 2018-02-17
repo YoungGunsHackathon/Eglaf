@@ -36,25 +36,33 @@
                     <color key="textColor" red="0.36676773428916931" green="0.7970200777053833" blue="0.45883515477180481" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="4Pq-Tq-QcL">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="4Pq-Tq-QcL">
                     <rect key="frame" x="144" y="279.5" width="87" height="68"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="4Pq-Tq-QcL" secondAttribute="height" multiplier="9:7" id="8M2-O0-f0g"/>
                     </constraints>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoH-v1-4OZ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.10196078431372549" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="I2X-Uy-ybF" firstAttribute="top" secondItem="lm9-zy-o3n" secondAttribute="bottom" constant="15" id="9dI-po-oOf"/>
                 <constraint firstItem="4Pq-Tq-QcL" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="9gN-tR-33t"/>
+                <constraint firstItem="hoH-v1-4OZ" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="IMJ-Q3-2cG"/>
+                <constraint firstItem="hoH-v1-4OZ" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="S55-MR-51V"/>
                 <constraint firstItem="lm9-zy-o3n" firstAttribute="top" secondItem="4Pq-Tq-QcL" secondAttribute="bottom" constant="15" id="Yob-uh-cH9"/>
                 <constraint firstItem="I2X-Uy-ybF" firstAttribute="centerX" secondItem="lm9-zy-o3n" secondAttribute="centerX" id="b9q-EI-tfd"/>
                 <constraint firstItem="lm9-zy-o3n" firstAttribute="centerX" secondItem="4Pq-Tq-QcL" secondAttribute="centerX" id="cPj-Lr-p8O"/>
+                <constraint firstItem="hoH-v1-4OZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="oa8-dK-v2x"/>
+                <constraint firstItem="hoH-v1-4OZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="tyj-Me-Uai"/>
                 <constraint firstItem="4Pq-Tq-QcL" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-20" id="vRQ-YE-8cY"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="button" destination="hoH-v1-4OZ" id="r7Z-OT-TtA"/>
                 <outlet property="conformImageView" destination="4Pq-Tq-QcL" id="FFC-T8-F36"/>
                 <outlet property="descriptionLabel" destination="I2X-Uy-ybF" id="yLc-q7-JAR"/>
                 <outlet property="nameLabel" destination="lm9-zy-o3n" id="aa4-aR-RS0"/>

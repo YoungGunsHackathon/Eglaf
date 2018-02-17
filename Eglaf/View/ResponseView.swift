@@ -13,6 +13,7 @@ class ResponseView: UIView {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var conformImageView: UIImageView!
+    @IBOutlet weak var button: UIButton!
     
     class func instanceFromNib() -> ResponseView {
         return UINib(nibName: "ResponseView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! ResponseView
@@ -29,6 +30,8 @@ class ResponseView: UIView {
     
     func notConformResponse() {
         descriptionLabel.text = "Access denied"
-        conformImageView.image = UIImage(named: "")
+        descriptionLabel.textColor = .red
+        nameLabel.text = ""
+        conformImageView.image = UIImage(named: "CloseRed")
     }
 }
