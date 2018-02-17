@@ -99,17 +99,18 @@ extension GuestViewController: UITableViewDataSource {
         cell.selectionStyle = .none
         
         cell.name.text = tickets[indexPath.row].name
+        cell.time.text = ""
         
         //cell.time.text = tickets[indexPath.row].checkedAt
-        if let date = Formatter.iso8601.date(from: tickets[indexPath.row].checkedAt!)  {
-            let minutesAgo: Int = Utils.getMinutes(timestamp: String(format: "%.0f", date.timeIntervalSince1970))
-            
-
-            cell.time.text = minutesAgo < 0 ?
-                "less than minute" : minutesAgo > 60 ?
-                Int(minutesAgo/60) < 1 ? "\(Int(minutesAgo/60)) hours ago" : "\(Int(minutesAgo/60)) hour ago"  : "\(minutesAgo) minutes ago"
-            
-        }
+//        if let date = Formatter.iso8601.date(from: tickets[indexPath.row].checkedAt!)  {
+//            let minutesAgo: Int = Utils.getMinutes(timestamp: String(format: "%.0f", date.timeIntervalSince1970))
+//
+//
+//            cell.time.text = minutesAgo < 0 ?
+//                "less than minute" : minutesAgo > 60 ?
+//                Int(minutesAgo/60) < 1 ? "\(Int(minutesAgo/60)) hours ago" : "\(Int(minutesAgo/60)) hour ago"  : "\(minutesAgo) minutes ago"
+//
+//        }
         
 //        if let creator = issues[indexPath.row].creator {
 //            userHandler.getUser(userId: creator) { (user) in
