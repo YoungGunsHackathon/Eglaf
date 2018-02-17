@@ -153,8 +153,15 @@ extension QRViewController {
             NSAttributedStringKey.foregroundColor: UIColor.white,
             NSAttributedStringKey.kern: 4
         ]
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "people"), style: .plain, target: self, action: nil)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "people"), style: .plain, target: self, action: #selector(showGuests))
+        
         self.navigationController?.navigationBar.tintColor = UIColor(red:0.35, green:0.43, blue:0.52, alpha:1)
+    }
+    
+    @objc func showGuests() {
+        let guestVC = GuestViewController.storyboardInit()
+        let navVC = UINavigationController(rootViewController: guestVC)
+        self.present(navVC, animated: true, completion: nil)
     }
 }
 
