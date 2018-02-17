@@ -109,6 +109,7 @@
                     <navigationItem key="navigationItem" id="Kfz-zv-cGE"/>
                     <connections>
                         <outlet property="collectionView" destination="Cib-UW-MZw" id="ZOD-36-2sk"/>
+                        <outlet property="descriptionField" destination="56c-LT-8sj" id="cKc-2Z-h4q"/>
                         <outlet property="prioritySegment" destination="qZA-5o-Y7i" id="nDd-Hy-8ZS"/>
                     </connections>
                 </viewController>
