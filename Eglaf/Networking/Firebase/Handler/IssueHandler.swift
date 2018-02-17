@@ -32,7 +32,7 @@ class IssueHandler {
     }
     
     func observeIssues(completion: @escaping ([Issue]) -> Void) {
-        dbProvider.issueRef.observe(.value) { (snapshot) in
+        dbProvider.issueRef.queryOrdered(byChild: "created_time").observe(.value) { (snapshot) in
             var issues: [Issue] = []
             
             if let dictionary = snapshot.value as? [String : Any] {
