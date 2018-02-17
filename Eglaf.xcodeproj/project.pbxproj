@@ -28,6 +28,9 @@
 		C5ABD9A42036627900FA5E75 /* CheckInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABD9A32036627900FA5E75 /* CheckInResponse.swift */; };
 		C5CCCA0E203721D1009756BB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5CCCA0D203721D0009756BB /* GoogleService-Info.plist */; };
 		C5CCCA1020373FEA009756BB /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CCCA0F20373FEA009756BB /* UIImageView+Extension.swift */; };
+		C5CCCA1320379C5F009756BB /* ResponseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CCCA1220379C5F009756BB /* ResponseView.swift */; };
+		C5CCCA1520379CDB009756BB /* ResponseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5CCCA1420379CDB009756BB /* ResponseView.xib */; };
+		C5CCCA172037B0DF009756BB /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CCCA162037B0DF009756BB /* CustomView.swift */; };
 		E306B7F920371F5E00CE5483 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E306B7F820371F5E00CE5483 /* HomeViewController.storyboard */; };
 		E306B7FB20371F6800CE5483 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E306B7FA20371F6800CE5483 /* HomeViewController.swift */; };
 		E306B7FD2037208100CE5483 /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E306B7FC2037208100CE5483 /* ProfileViewController.storyboard */; };
@@ -76,6 +79,9 @@
 		C5ABD9A32036627900FA5E75 /* CheckInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInResponse.swift; sourceTree = "<group>"; };
 		C5CCCA0D203721D0009756BB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C5CCCA0F20373FEA009756BB /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		C5CCCA1220379C5F009756BB /* ResponseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseView.swift; sourceTree = "<group>"; };
+		C5CCCA1420379CDB009756BB /* ResponseView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResponseView.xib; sourceTree = "<group>"; };
+		C5CCCA162037B0DF009756BB /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		E306B7F820371F5E00CE5483 /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
 		E306B7FA20371F6800CE5483 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E306B7FC2037208100CE5483 /* ProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
@@ -201,6 +207,7 @@
 		C5ABD98120364F6000FA5E75 /* Eglaf */ = {
 			isa = PBXGroup;
 			children = (
+				C5CCCA1120379C12009756BB /* View */,
 				C5ABD99420364F6E00FA5E75 /* Networking */,
 				C5ABD99620364F8F00FA5E75 /* Model */,
 				C5ABD99520364F8400FA5E75 /* Controller */,
@@ -272,6 +279,16 @@
 				E37A2BCB20375D31006A3F7D /* ReportViewController.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		C5CCCA1120379C12009756BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C5CCCA1220379C5F009756BB /* ResponseView.swift */,
+				C5CCCA1420379CDB009756BB /* ResponseView.xib */,
+				C5CCCA162037B0DF009756BB /* CustomView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E306B8002037244B00CE5483 /* Xib */ = {
@@ -376,6 +393,7 @@
 				E37A2BD2203760C2006A3F7D /* CategoryCollectionViewCell.xib in Resources */,
 				E306B7F920371F5E00CE5483 /* HomeViewController.storyboard in Resources */,
 				C5CCCA0E203721D1009756BB /* GoogleService-Info.plist in Resources */,
+				C5CCCA1520379CDB009756BB /* ResponseView.xib in Resources */,
 				C5ABD98A20364F6000FA5E75 /* Assets.xcassets in Resources */,
 				E306B8462037276E00CE5483 /* SF-Pro-Display-Regular.otf in Resources */,
 				C5ABD98820364F6000FA5E75 /* Main.storyboard in Resources */,
@@ -482,7 +500,9 @@
 				C5ABD99A2036511800FA5E75 /* Network.swift in Sources */,
 				E306B7FB20371F6800CE5483 /* HomeViewController.swift in Sources */,
 				C58BD0FA2036F7A4004CEF79 /* Constants.swift in Sources */,
+				C5CCCA172037B0DF009756BB /* CustomView.swift in Sources */,
 				C5ABD98320364F6000FA5E75 /* AppDelegate.swift in Sources */,
+				C5CCCA1320379C5F009756BB /* ResponseView.swift in Sources */,
 				E306B7FF2037208E00CE5483 /* ProfileViewController.swift in Sources */,
 				E37A2BC6203737EE006A3F7D /* NavBarHeight.swift in Sources */,
 				C5ABD9A2203653EE00FA5E75 /* Tickets.swift in Sources */,
