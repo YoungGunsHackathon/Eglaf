@@ -156,7 +156,11 @@ extension HomeViewController: SwipeTableViewCellDelegate {
         
         let deleteAction = SwipeAction(style: .default, title: "On it!") { action, indexPath in
             // handle action by updating model with deletion
+            self.issueHandler.removeIssue(issueId: self.issues[indexPath.row].issueId!)
+            print(indexPath.row)
+            
             self.issues.remove(at: indexPath.section)
+            
         }
         
         deleteAction.image = #imageLiteral(resourceName: "hands")
