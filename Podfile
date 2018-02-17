@@ -11,7 +11,8 @@ target 'Eglaf' do
 	pod 'Reqres'
 	pod 'Firebase/Core'
 	pod 'Firebase/Database'
-	pod 'Firebase/Storage'	
+	pod 'Firebase/Storage'
+	pod 'lottie-ios'
 
   # Pods for Eglaf
 

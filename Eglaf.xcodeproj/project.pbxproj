@@ -57,6 +57,7 @@
 		E391AD852036E748002B5FF4 /* OKAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E391AD842036E748002B5FF4 /* OKAlert.swift */; };
 		E3B045762037D550005D4E10 /* SplashViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3B045752037D550005D4E10 /* SplashViewController.storyboard */; };
 		E3B045782037D55C005D4E10 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B045772037D55C005D4E10 /* SplashViewController.swift */; };
+		E3B0457B2037EC04005D4E10 /* checked_done_.json in Resources */ = {isa = PBXBuildFile; fileRef = E3B0457A2037EC04005D4E10 /* checked_done_.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +115,7 @@
 		E391AD842036E748002B5FF4 /* OKAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OKAlert.swift; sourceTree = "<group>"; };
 		E3B045752037D550005D4E10 /* SplashViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashViewController.storyboard; sourceTree = "<group>"; };
 		E3B045772037D55C005D4E10 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		E3B0457A2037EC04005D4E10 /* checked_done_.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = checked_done_.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 		C5ABD98120364F6000FA5E75 /* Eglaf */ = {
 			isa = PBXGroup;
 			children = (
+				E3B045792037EBED005D4E10 /* Animations */,
 				C5CCCA1120379C12009756BB /* View */,
 				C5ABD99420364F6E00FA5E75 /* Networking */,
 				C5ABD99620364F8F00FA5E75 /* Model */,
@@ -340,6 +343,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		E3B045792037EBED005D4E10 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				E3B0457A2037EC04005D4E10 /* checked_done_.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -419,6 +430,7 @@
 				E306B8462037276E00CE5483 /* SF-Pro-Display-Regular.otf in Resources */,
 				C5ABD98820364F6000FA5E75 /* Main.storyboard in Resources */,
 				E306B8472037276E00CE5483 /* SF-Pro-Display-Bold.otf in Resources */,
+				E3B0457B2037EC04005D4E10 /* checked_done_.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +452,7 @@
 				"${BUILT_PRODUCTS_DIR}/Reqres/Reqres.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -452,6 +465,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reqres.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

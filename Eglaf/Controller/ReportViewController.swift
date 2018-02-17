@@ -9,10 +9,15 @@
 import Foundation
 import UIKit
 
+protocol ReportViewControllerDelegate {
+    func viewDismissed()
+}
+
 class ReportViewController: UIViewController, StoryboardInit {
     
     var userHandler: UserHandler = UserHandler.sharedInstance
     var issueHandler: IssueHandler = IssueHandler.sharedInstance
+    var delegate: ReportViewControllerDelegate?
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var prioritySegment: UISegmentedControl!
@@ -71,14 +76,22 @@ class ReportViewController: UIViewController, StoryboardInit {
             return
         }
         
-        var selectedCategory = issueCategories[path.first!.item].rawValue.lowercased()
+        guard let index = path.first?.item else {
+            showOKAlert(message: "Please select a category")
+            return
+        }
+        var selectedCategory = issueCategories[index].rawValue.lowercased()
         selectedCategory.removeFirst()
         let isUrgent = prioritySegment.selectedSegmentIndex == 0 ? false : true
         let issue = Issue(description: descriptionField.text, category: selectedCategory, urgent: isUrgent, location: "")
         
         issueHandler.addIssue(issue: issue)
         
-        self.dismiss(animated: true, completion: nil)
+        //play anim here kundo
+        
+        self.dismiss(animated: true, completion: {
+            self.delegate?.viewDismissed()
+        })
     }
     
     @objc func cancel() {

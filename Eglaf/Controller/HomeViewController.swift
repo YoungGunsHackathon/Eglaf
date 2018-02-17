@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Lottie
 
 class HomeViewController: UIViewController, StoryboardInit {
     
@@ -66,6 +67,7 @@ extension HomeViewController {
     }
     @objc func showReportScreen() {
         let vc = ReportViewController.storyboardInit()
+        vc.delegate = self
         let navVC = UINavigationController(rootViewController: vc)
         present(navVC, animated: true, completion: nil)
     }
@@ -123,8 +125,23 @@ extension HomeViewController: UITableViewDataSource {
             cell.categoryLabel.text = category
         }
         
-        
-        
         return cell
+    }
+}
+
+extension HomeViewController: ReportViewControllerDelegate {
+    func viewDismissed() {
+        tableView.alpha = 0.1
+        let animationView = LOTAnimationView(name: "checked_done_")
+        animationView.loopAnimation = false
+        self.view.addSubview(animationView)
+        self.view.bringSubview(toFront: animationView)
+        animationView.center = CGPoint(x: view.frame.width / 2.0, y: view.frame.height / 2.0)
+        animationView.play { (completion) in
+            UIView.transition(with: self.view, duration: 0.2, options: [.transitionCrossDissolve], animations: {
+                animationView.removeFromSuperview()
+                self.tableView.alpha = 1.0
+            }, completion: nil)
+        }
     }
 }
