@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class TabBarViewController: UITabBarController {
+class TabBarViewController: UITabBarController, StoryboardInit {
     
     //MARK: Propertiess
     
@@ -23,6 +23,10 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         prepareTabBar()
         prepareUI()
+        print("I Should be second")
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
 }
 
