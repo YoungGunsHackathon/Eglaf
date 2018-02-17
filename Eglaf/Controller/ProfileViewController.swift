@@ -22,6 +22,7 @@ class ProfileViewController: UIViewController, StoryboardInit {
         profileImageView.clipsToBounds = true
         editButton.backgroundColor = .white
         editButton.layer.cornerRadius = editButton.frame.size.width / 2.0
+        editButton.setImage(#imageLiteral(resourceName: "pen"), for: .normal)
     }
     
     func prepareNavBar() {
