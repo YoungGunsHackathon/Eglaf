@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fFs-xH-A0m">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="M2W-03-thk">
+            <objects>
+                <viewController id="fFs-xH-A0m" customClass="SplashViewController" customModule="Eglaf" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wSz-5H-apB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Report has been posted." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Pa-Hk-fPZ">
+                                <rect key="frame" x="107" y="419" width="160" height="16"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="13"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yourock" translatesAutoresizingMaskIntoConstraints="NO" id="LhX-It-i4S">
+                                <rect key="frame" x="124.5" y="300" width="125" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="IeL-YT-PSI"/>
+                                    <constraint firstAttribute="width" secondItem="LhX-It-i4S" secondAttribute="height" multiplier="15:8" id="LRQ-CO-6Jc"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU ROCK!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sne-5D-yjU">
+                                <rect key="frame" x="111" y="383" width="153.5" height="36"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.1019607843" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LhX-It-i4S" firstAttribute="centerY" secondItem="wSz-5H-apB" secondAttribute="centerY" id="FKW-pg-ATC"/>
+                            <constraint firstItem="sne-5D-yjU" firstAttribute="centerX" secondItem="LhX-It-i4S" secondAttribute="centerX" id="LCE-Yk-XKT"/>
+                            <constraint firstItem="sne-5D-yjU" firstAttribute="top" secondItem="LhX-It-i4S" secondAttribute="bottom" constant="16" id="NDh-DS-2Zt"/>
+                            <constraint firstItem="8Pa-Hk-fPZ" firstAttribute="centerX" secondItem="sne-5D-yjU" secondAttribute="centerX" id="lwG-Tr-lW2"/>
+                            <constraint firstItem="LhX-It-i4S" firstAttribute="centerX" secondItem="wSz-5H-apB" secondAttribute="centerX" id="oAD-gH-9g1"/>
+                            <constraint firstItem="8Pa-Hk-fPZ" firstAttribute="top" secondItem="sne-5D-yjU" secondAttribute="bottom" id="rhf-7Y-ywY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fyi-qM-QG6"/>
+                    </view>
+                    <connections>
+                        <outlet property="youRockLabel" destination="sne-5D-yjU" id="ufN-G2-cSp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2YE-Db-U8F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="168.80000000000001" y="139.880059970015"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="yourock" width="125" height="125"/>
+    </resources>
+</document>
