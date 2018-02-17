@@ -46,7 +46,7 @@ class QRViewController: UIViewController, StoryboardInit {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        initializeQR()
         downloadTickets()
     }
     
@@ -57,7 +57,6 @@ class QRViewController: UIViewController, StoryboardInit {
             if case .success(let value) = result {
                 if let data = value {
                     self.tickets = data
-                    self.initializeQR()
                     //self.state = .ready
                 } else {
                     //self.state = .empty
