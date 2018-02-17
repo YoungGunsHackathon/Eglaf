@@ -8,6 +8,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Bold.otf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Profile View Controller-->
         <scene sceneID="hhX-6l-ss1">
@@ -16,13 +21,54 @@
                     <view key="view" contentMode="scaleToFill" id="n9e-72-RMc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jindra" translatesAutoresizingMaskIntoConstraints="NO" id="PeN-zQ-KSQ">
+                                <rect key="frame" x="117" y="32" width="140" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="AII-Dg-z9n"/>
+                                    <constraint firstAttribute="height" constant="140" id="CHF-19-DcN"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bb9-YF-pW7">
+                                <rect key="frame" x="216" y="153" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="EsA-po-Mq9"/>
+                                    <constraint firstAttribute="height" constant="37" id="eLS-Fh-In6"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="editButtonPressed:" destination="PkQ-HP-6Cf" eventType="touchUpInside" id="kfg-mG-GvR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sue Matthews" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8G-d1-7bf">
+                                <rect key="frame" x="16" y="192" width="343" height="20"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.1019607843" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="PeN-zQ-KSQ" firstAttribute="top" secondItem="n9e-72-RMc" secondAttribute="top" constant="32" id="49R-po-ciC"/>
+                            <constraint firstItem="RFX-lo-vcv" firstAttribute="trailing" secondItem="u8G-d1-7bf" secondAttribute="trailing" constant="16" id="FFo-aO-8cm"/>
+                            <constraint firstItem="PeN-zQ-KSQ" firstAttribute="centerX" secondItem="n9e-72-RMc" secondAttribute="centerX" id="KqC-lP-b3h"/>
+                            <constraint firstItem="u8G-d1-7bf" firstAttribute="leading" secondItem="RFX-lo-vcv" secondAttribute="leading" constant="16" id="T4L-F4-Ltt"/>
+                            <constraint firstItem="u8G-d1-7bf" firstAttribute="top" secondItem="PeN-zQ-KSQ" secondAttribute="bottom" constant="20" id="ZdV-QN-GMQ"/>
+                            <constraint firstItem="Bb9-YF-pW7" firstAttribute="top" secondItem="RFX-lo-vcv" secondAttribute="top" constant="133" id="oK3-5a-JOd"/>
+                            <constraint firstItem="RFX-lo-vcv" firstAttribute="trailing" secondItem="Bb9-YF-pW7" secondAttribute="trailing" constant="122" id="uSo-yp-1as"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="RFX-lo-vcv"/>
                     </view>
+                    <connections>
+                        <outlet property="editButton" destination="Bb9-YF-pW7" id="oH1-Ni-q8g"/>
+                        <outlet property="profileImageView" destination="PeN-zQ-KSQ" id="ekX-SR-yNK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T5Z-Vc-701" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="142" y="122"/>
+            <point key="canvasLocation" x="141.59999999999999" y="121.88905547226388"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="jindra" width="600" height="600"/>
+    </resources>
 </document>
