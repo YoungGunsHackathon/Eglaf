@@ -11,7 +11,7 @@ import ReactiveSwift
 
 protocol EventAPIServicing {
     func getTickets(eventId: String) -> SignalProducer<Tickets?, RequestError>
-    //func getTicketArray(eventId: String) -> SignalProducer<[Ticket], RequestError>
+    func userCheckedAt(eventId: String, ticketId: String) -> SignalProducer<CheckInResponse?, RequestError>
 }
 
 
@@ -25,12 +25,6 @@ class EventAPIService : APIService, EventAPIServicing {
         let relativeURL = Foundation.URL(string: path, relativeTo: URL)!
         return relativeURL
     }
-    
-//    func getTicketArray(eventId: String) -> SignalProducer<Tickets?, RequestError> {
-//
-//
-//
-//    }
     
     func getTickets(eventId: String) -> SignalProducer<Tickets?, RequestError> {
         return self.request("\(eventId)")
@@ -46,18 +40,18 @@ class EventAPIService : APIService, EventAPIServicing {
         }
     }
     
-//    internal func getRecipeDetail(recipeID: String) -> SignalProducer<Any?, RequestError> {
-//        return self.request("recipes/\(recipeID)").mapError { .network($0) }
-//    }
-//
-    //    internal func createNewRecipe(recipe: Recipe) -> SignalProducer<Any?, RequestError> {
-    //
-    //        var param : [String : Any] = [""]
-    //
-    //        return self.request("recipes", method: .post, parameters: [String: Any]? = nil, encoding: URLEncoding.default, headers: [String: String] = [:], authHandler: nil)
-    //    }
-    
-    
-    
+    func userCheckedAt(eventId: String, ticketId: String) -> SignalProducer<CheckInResponse?, RequestError> {
+        return self.request("\(eventId)/checkin/\(ticketId)", method: .post)
+            .mapError { .network($0) }
+            .map{ (data: Any?) in
+                var checkInResponse: CheckInResponse?
+                
+                if let response = data as? [String : Any] {
+                    checkInResponse = CheckInResponse(dictionary: response)
+                }
+                
+                return checkInResponse
+        }
+    }
 }
 

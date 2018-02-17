@@ -21,13 +21,16 @@ class QRViewController: UIViewController, StoryboardInit {
     var qrCodeFrameView = UIView()
     
     //MARK: Outlets
-    
     @IBOutlet weak var qrLabel: UILabel!
+    @IBOutlet weak var responseView: ResponseView!
     
     //MARK: Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        responseView.isHidden = true
+        
         downloadTickets()
     }
     
@@ -52,10 +55,28 @@ class QRViewController: UIViewController, StoryboardInit {
             }
         }
     }
+    
+    func setCheckedTicket(eventId: String, ticketId: String, complition: @escaping (CheckInResponse) -> Void) {
+        apiEvent.userCheckedAt(eventId: eventId, ticketId: ticketId).startWithResult { (result) in
+            if case .success(let value) = result {
+                if let data = value {
+                    //self.state = .ready
+                    complition(data)
+                } else {
+                    //self.state = .empty
+                    print("--- No Data ----")
+                }
+            }
+            
+            if case .failure(let error) = result {
+                //self.state = .error
+                print(error)
+            }
+        }
+    }
 }
 
 //MARK: - QRViewController (QR Init)
-
 extension QRViewController {
     func initializeQR() {
         let captureDeviceOptional = AVCaptureDevice.default(for: AVMediaType.video)
@@ -88,6 +109,8 @@ extension QRViewController {
         captureSession.startRunning()
         initializeUI()
     }
+    
+    
 }
 
 //MARK: - QRViewController (UI)
@@ -101,6 +124,7 @@ extension QRViewController {
         view.bringSubview(toFront: qrLabel)
         prepareNavBar()
     }
+    
     func prepareNavBar() {
         //self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.isTranslucent = false
@@ -158,23 +182,35 @@ extension QRViewController {
         }
         showTicketConfirmation(ticketID: ticketIDUnwrapped)
     }
+    
     func showTicketConfirmation(ticketID: String) {
         if compareTicketID(ticketID: ticketID) {
-            showOKAlert(message: "JE TAM BRASKO")
+            //showOKAlert(message: "JE TAM BRASKO")
         } else {
-            showOKAlert(message: "BOHUZEL NIKDO NENI")
+            //showOKAlert(message: "BOHUZEL NIKDO NENI")
         }
     }
+    
     func compareTicketID(ticketID: String) -> Bool {
         var matched = false
-//        print("----------------------")
-//        print(tickets)
-//        for ticket in (tickets?.tickets)! {
-//            print(ticket)
-//            if ticketID == ticket.ticketId {
-//                matched = true
-//            }
-//        }
-        return false
+        
+        for ticket in (tickets?.tickets)! {
+            print(ticket)
+            if ticketID == ticket.ticketId {
+                matched = true
+                setCheckedTicket(eventId: "cc6c6fad-8047-4084-9aca-d7be1ee06c92eve", ticketId: ticketID, complition: { (checkInResponse) in
+                    //self.showOKAlert(message: "\(checkInResponse.result!)")
+                    
+                    self.responseView.isHidden = false
+                    self.responseView.conformResponse(name: ticket.name!)
+                })
+            }
+        }
+        
+        if !matched {
+            //TODO
+        }
+        
+        return matched
     }
 }

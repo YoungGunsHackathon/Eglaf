@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Bold.otf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ResponseView" customModule="Eglaf" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attende" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lm9-zy-o3n">
+                    <rect key="frame" x="156.5" y="376" width="62" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20.5" id="mPe-Fw-maz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Access confirm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2X-Uy-ybF">
+                    <rect key="frame" x="142" y="412" width="90" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="14.5" id="IaK-0Z-15E"/>
+                        <constraint firstAttribute="height" constant="14.5" id="wD4-dg-UDm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="4Pq-Tq-QcL">
+                    <rect key="frame" x="142" y="298" width="90" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="13j-8j-iwo"/>
+                        <constraint firstAttribute="width" constant="90" id="38w-BG-7x2"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.10196078431372549" blue="0.21568627450980393" alpha="0.79157748287671237" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="lm9-zy-o3n" firstAttribute="top" secondItem="4Pq-Tq-QcL" secondAttribute="bottom" constant="8" id="71l-a9-pIn"/>
+                <constraint firstItem="I2X-Uy-ybF" firstAttribute="centerX" secondItem="lm9-zy-o3n" secondAttribute="centerX" id="8Xw-xm-hzx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="I2X-Uy-ybF" secondAttribute="bottom" constant="240.5" id="Q6G-QH-kvb"/>
+                <constraint firstItem="4Pq-Tq-QcL" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="278" id="TwG-vN-hbq"/>
+                <constraint firstItem="I2X-Uy-ybF" firstAttribute="top" secondItem="lm9-zy-o3n" secondAttribute="bottom" constant="15.5" id="WQu-Oc-PUQ"/>
+                <constraint firstItem="lm9-zy-o3n" firstAttribute="top" secondItem="4Pq-Tq-QcL" secondAttribute="bottom" constant="8" id="cFD-bN-M36"/>
+                <constraint firstItem="4Pq-Tq-QcL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="142" id="h6x-Zd-97R"/>
+                <constraint firstItem="I2X-Uy-ybF" firstAttribute="top" secondItem="lm9-zy-o3n" secondAttribute="bottom" constant="15.5" id="i6l-bt-tLa"/>
+                <constraint firstItem="I2X-Uy-ybF" firstAttribute="leading" secondItem="4Pq-Tq-QcL" secondAttribute="leading" id="mJL-NW-dgS"/>
+                <constraint firstItem="I2X-Uy-ybF" firstAttribute="trailing" secondItem="4Pq-Tq-QcL" secondAttribute="trailing" id="qga-sP-qFZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4Pq-Tq-QcL" secondAttribute="trailing" constant="143" id="vkw-EE-FTo"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="conformImageView" destination="4Pq-Tq-QcL" id="FFC-T8-F36"/>
+                <outlet property="descriptionLabel" destination="I2X-Uy-ybF" id="yLc-q7-JAR"/>
+                <outlet property="nameLabel" destination="lm9-zy-o3n" id="aa4-aR-RS0"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="checkmark" width="87" height="67"/>
+    </resources>
+</document>

@@ -9,14 +9,16 @@
 import Foundation
 
 class Tickets: NSObject {
-    var tickets: [Ticket]?
+    var tickets: [Ticket] = []
     var lastStamp: String?
     
     init(dictionary: [String : Any]) {
         super.init()
         
-        if let tickets = dictionary["tickets"] as? [Ticket] {
-            self.tickets = tickets
+        if let tickets = dictionary["tickets"] as? [Any] {
+            for ticket in tickets {
+                self.tickets.append(Ticket(dictionary: ticket as! [String : Any]))
+            }
         }
 
         if let lastStamp = dictionary["lastStamp"] as? String {
