@@ -39,14 +39,24 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view alpha="0.5" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ghB-p2-Sjd">
+                        <rect key="frame" x="11" y="55" width="298" height="0.0"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="CYN-nh-t5w"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" red="0.0" green="0.10196078431372549" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="Tzl-tU-ajf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="9FH-7U-ANn"/>
                     <constraint firstItem="nnQ-Mg-x2w" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="B2U-Zx-omm"/>
+                    <constraint firstItem="ghB-p2-Sjd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="D6Q-Fr-XLv"/>
+                    <constraint firstAttribute="trailing" secondItem="ghB-p2-Sjd" secondAttribute="trailing" constant="11" id="ThT-Jp-nBe"/>
                     <constraint firstItem="Tzl-tU-ajf" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="Wnl-uh-JLV"/>
                     <constraint firstItem="Tzl-tU-ajf" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="ap2-gE-gJF"/>
                     <constraint firstItem="nnQ-Mg-x2w" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="b1n-8N-6zK"/>
+                    <constraint firstAttribute="bottom" secondItem="ghB-p2-Sjd" secondAttribute="bottom" constant="3.5" id="pRa-ej-t9W"/>
                     <constraint firstItem="nnQ-Mg-x2w" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="sGy-bq-KSB"/>
                 </constraints>
             </tableViewCellContentView>

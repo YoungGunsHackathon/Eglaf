@@ -35,6 +35,7 @@
 		C5CCCA1B2037ECA6009756BB /* GuestViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5CCCA1A2037ECA6009756BB /* GuestViewController.storyboard */; };
 		C5CCCA242037F0AD009756BB /* GuestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CCCA222037F0AD009756BB /* GuestTableViewCell.swift */; };
 		C5CCCA252037F0AD009756BB /* GuestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5CCCA232037F0AD009756BB /* GuestTableViewCell.xib */; };
+		C5CCCA2720383673009756BB /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CCCA2620383673009756BB /* Date+Extension.swift */; };
 		E306B7F920371F5E00CE5483 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E306B7F820371F5E00CE5483 /* HomeViewController.storyboard */; };
 		E306B7FB20371F6800CE5483 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E306B7FA20371F6800CE5483 /* HomeViewController.swift */; };
 		E306B7FD2037208100CE5483 /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E306B7FC2037208100CE5483 /* ProfileViewController.storyboard */; };
@@ -97,6 +98,7 @@
 		C5CCCA1A2037ECA6009756BB /* GuestViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GuestViewController.storyboard; sourceTree = "<group>"; };
 		C5CCCA222037F0AD009756BB /* GuestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestTableViewCell.swift; sourceTree = "<group>"; };
 		C5CCCA232037F0AD009756BB /* GuestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuestTableViewCell.xib; sourceTree = "<group>"; };
+		C5CCCA2620383673009756BB /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		E306B7F820371F5E00CE5483 /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
 		E306B7FA20371F6800CE5483 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E306B7FC2037208100CE5483 /* ProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
@@ -351,6 +353,7 @@
 				E391AD7C2036D8C0002B5FF4 /* StoryboardInit.swift */,
 				E391AD842036E748002B5FF4 /* OKAlert.swift */,
 				C5CCCA0F20373FEA009756BB /* UIImageView+Extension.swift */,
+				C5CCCA2620383673009756BB /* Date+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -552,6 +555,7 @@
 				C5ABD9A42036627900FA5E75 /* CheckInResponse.swift in Sources */,
 				C5ABD99A2036511800FA5E75 /* Network.swift in Sources */,
 				E306B7FB20371F6800CE5483 /* HomeViewController.swift in Sources */,
+				C5CCCA2720383673009756BB /* Date+Extension.swift in Sources */,
 				C58BD0FA2036F7A4004CEF79 /* Constants.swift in Sources */,
 				C5CCCA172037B0DF009756BB /* CustomView.swift in Sources */,
 				C5ABD98320364F6000FA5E75 /* AppDelegate.swift in Sources */,

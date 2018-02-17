@@ -34,6 +34,9 @@ class GuestViewController: UIViewController, StoryboardInit {
     }
     
     func UIShit() {
+        self.tableView.sectionIndexColor = UIColor.clear
+        self.tableView.separatorColor = UIColor.lightGray
+        
         self.tableView.backgroundColor = UIColor.clear
         
         self.navigationController?.navigationBar.isTranslucent = false
@@ -80,7 +83,7 @@ class GuestViewController: UIViewController, StoryboardInit {
 
 extension GuestViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
+        return 60
     }
 }
 
@@ -93,8 +96,20 @@ extension GuestViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
+        cell.selectionStyle = .none
+        
         cell.name.text = tickets[indexPath.row].name
-        cell.time.text = tickets[indexPath.row].checkedAt
+        
+        //cell.time.text = tickets[indexPath.row].checkedAt
+        if let date = Formatter.iso8601.date(from: tickets[indexPath.row].checkedAt!)  {
+            let minutesAgo: Int = Utils.getMinutes(timestamp: String(format: "%.0f", date.timeIntervalSince1970))
+            
+
+            cell.time.text = minutesAgo < 0 ?
+                "less than minute" : minutesAgo > 60 ?
+                Int(minutesAgo/60) < 1 ? "\(Int(minutesAgo/60)) hours ago" : "\(Int(minutesAgo/60)) hour ago"  : "\(minutesAgo) minutes ago"
+            
+        }
         
 //        if let creator = issues[indexPath.row].creator {
 //            userHandler.getUser(userId: creator) { (user) in

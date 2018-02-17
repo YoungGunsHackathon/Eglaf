@@ -22,6 +22,10 @@ class IssueHandler {
         dbProvider.issueRef.childByAutoId().setValue(issue.createDictionary())
     }
     
+    func removeIssue(issueId: String) {
+        dbProvider.issueRef.child(issueId).removeValue()
+    }
+    
     func getIssue(issueId: String, completion: @escaping (Issue)->Void) {
         dbProvider.issueRef(issueId: issueId).observeSingleEvent(of: .value) { (snapshot) in
             if let dictionary = snapshot.value as? [String : Any] {
