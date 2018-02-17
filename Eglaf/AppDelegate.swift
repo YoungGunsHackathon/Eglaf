@@ -21,7 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = TabBarViewController()
+        window?.rootViewController = AnimationViewController()
+        window?.rootViewController?.view.backgroundColor = UIColor(red: 0, green: 0.1, blue: 0.22, alpha: 1)
         window?.makeKeyAndVisible()
         
         UIApplication.shared.statusBarStyle = .lightContent
