@@ -170,7 +170,7 @@ extension HomeViewController: FilterViewControllerDelegate {
     func viewDissapeared(with: String) {
         if with == "all" {
             issues = fullIssues
-            self.navigationItem.title = "#DASHBOARD"
+            self.navigationItem.title = "DASHBOARD"
             tableView.reloadData()
         } else {
             issues = fullIssues
