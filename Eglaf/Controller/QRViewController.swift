@@ -19,17 +19,18 @@ class QRViewController: UIViewController, StoryboardInit {
     var captureSession = AVCaptureSession()
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var qrCodeFrameView = UIView()
+    @IBOutlet weak var opacityView: UIView!
     
     //MARK: Outlets
-    @IBOutlet weak var qrLabel: UILabel!
-    @IBOutlet weak var responseView: ResponseView!
+    //@IBOutlet weak var responseView: UIView!
+    
     
     //MARK: Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        responseView.isHidden = true
+        //responseView.isHidden = true
         
         downloadTickets()
     }
@@ -122,7 +123,7 @@ extension QRViewController {
         qrCodeFrameView.layer.borderWidth = 2
         view.addSubview(qrCodeFrameView)
         view.bringSubview(toFront: qrCodeFrameView)
-        view.bringSubview(toFront: qrLabel)
+        //view.bringSubview(toFront: qrLabel)
         prepareNavBar()
     }
     
@@ -148,12 +149,12 @@ extension QRViewController: AVCaptureMetadataOutputObjectsDelegate {
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         guard metadataObjects.count > 0 else {
             qrCodeFrameView.frame = CGRect.zero
-            qrLabel.text = "No QR code is detected"
+            //qrLabel.text = "No QR code is detected"
             return
         }
 
         guard let metadataObject = metadataObjects.first as? AVMetadataMachineReadableCodeObject else {
-            qrLabel.text = "Can't scan unknown code"
+            //qrLabel.text = "Can't scan unknown code"
             return
         }
         
@@ -162,10 +163,11 @@ extension QRViewController: AVCaptureMetadataOutputObjectsDelegate {
         qrCodeFrameView.frame = barCodeObject!.bounds
         
         guard let qrString = metadataObject.stringValue else {
-            qrLabel.text = "QR contains no text"
+            //qrLabel.text = "QR contains no text"
             return
         }
 
+        self.captureSession.stopRunning()
         getTicketIDFrom(qrString: qrString)
     }
 }
@@ -176,7 +178,7 @@ extension QRViewController {
     func getTicketIDFrom(qrString: String) {
         guard let url = URLComponents(string: qrString) else { return }
         let ticketID = url.queryItems?.first?.value
-        qrLabel.text = ticketID
+        //qrLabel.text = ticketID
         guard let ticketIDUnwrapped = ticketID else {
             showOKAlert(message: "Unrelevant QR Code!")
             return
@@ -196,20 +198,38 @@ extension QRViewController {
         var matched = false
         
         for ticket in (tickets?.tickets)! {
-            print(ticket)
+            //print(ticket)
             if ticketID == ticket.ticketId {
                 matched = true
                 setCheckedTicket(eventId: "cc6c6fad-8047-4084-9aca-d7be1ee06c92eve", ticketId: ticketID, complition: { (checkInResponse) in
-                    //self.showOKAlert(message: "\(checkInResponse.result!)")
                     
-                    self.responseView.isHidden = false
-                    self.responseView.conformResponse(name: ticket.name!)
+                    let responseView = ResponseView.instanceFromNib()
+                    responseView.conformResponse(name: ticket.name!)
+                    responseView.frame = CGRect(x: 0, y: 0, width: 240, height: 240)
+                    responseView.center = CGPoint(x: self.view.frame.width / 2.0, y: self.view.frame.height / 2.0)
+                    responseView.layer.cornerRadius = 43
+                    UIView.transition(with: self.view, duration: 0.5, options: [.transitionCrossDissolve], animations: {
+                        self.opacityView.isHidden = false
+                        self.view.bringSubview(toFront: self.opacityView)
+                        self.view.addSubview(responseView)
+                    }, completion: { _ in
+                        
+                    })
                 })
             }
         }
         
         if !matched {
-            //TODO
+            let responseView = ResponseView.instanceFromNib()
+            responseView.notConformResponse()
+            responseView.frame = CGRect(x: 0, y: 0, width: 240, height: 240)
+            responseView.center = CGPoint(x: self.view.frame.width / 2.0, y: self.view.frame.height / 2.0)
+            responseView.layer.cornerRadius = 43
+            UIView.transition(with: self.view, duration: 0.5, options: [.transitionCrossDissolve], animations: {
+                self.opacityView.isHidden = false
+                self.view.bringSubview(toFront: self.opacityView)
+                self.view.addSubview(responseView)
+            }, completion: nil)
         }
         
         return matched

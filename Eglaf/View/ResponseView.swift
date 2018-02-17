@@ -14,18 +14,21 @@ class ResponseView: UIView {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var conformImageView: UIImageView!
     
+    class func instanceFromNib() -> ResponseView {
+        return UINib(nibName: "ResponseView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! ResponseView
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
     func conformResponse(name: String) {
-        descriptionLabel.text = "Access confirm"
+        descriptionLabel.text = "Access confirmed"
         nameLabel.text = name
     }
     
     func notConformResponse() {
-        descriptionLabel.text = "Access denided"
+        descriptionLabel.text = "Access denied"
         conformImageView.image = UIImage(named: "")
     }
-    
 }
