@@ -18,6 +18,7 @@ class HomeViewController: UIViewController, StoryboardInit {
     var userHandler: UserHandler = UserHandler.sharedInstance
     var issueHandler: IssueHandler = IssueHandler.sharedInstance
     var issues: [Issue] = []
+    var fullIssues = [Issue]()
     
     //MARK: Life Cycle
     
@@ -26,6 +27,7 @@ class HomeViewController: UIViewController, StoryboardInit {
             self.issues = []
             for issue in issuesFetched {
                 self.issues.append(issue)
+                self.fullIssues.append(issue)
             }
             
             self.issues = self.issues.sorted {
@@ -63,7 +65,7 @@ extension HomeViewController {
         ]
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "add"), style: .plain, target: self, action: #selector(showReportScreen))
         self.navigationController?.navigationBar.tintColor = UIColor(red:0.35, green:0.43, blue:0.52, alpha:1)
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "ALL", style: .plain, target: self, action: #selector(showFilterScreen))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "CATEGORY", style: .plain, target: self, action: #selector(showFilterScreen))
         self.navigationItem.leftBarButtonItem?.setTitleTextAttributes([
             NSAttributedStringKey.font: UIFont(name: "SFProDisplay-Regular", size: 14)!,
             NSAttributedStringKey.foregroundColor: UIColor(red:0.35, green:0.43, blue:0.52, alpha:1),
@@ -78,8 +80,14 @@ extension HomeViewController {
     }
     @objc func showFilterScreen() {
         let vc = FilterViewController.storyboardInit()
+        vc.delegate = self
         let navVC = UINavigationController(rootViewController: vc)
-        present(navVC, animated: true, completion: nil)
+        present(navVC, animated: true, completion: {
+            let temp = self.issues
+            self.issues = []
+            self.tableView.reloadData()
+            self.issues = temp
+        })
     }
     func registerXibs() {
         tableView.register(UINib(nibName: "IssueTableViewCell", bundle: nil), forCellReuseIdentifier: "IssueTableViewCell")
@@ -154,6 +162,21 @@ extension HomeViewController: ReportViewControllerDelegate {
                 animationView.removeFromSuperview()
                 self.tableView.alpha = 1.0
             }, completion: nil)
+        }
+    }
+}
+
+extension HomeViewController: FilterViewControllerDelegate {
+    func viewDissapeared(with: String) {
+        if with == "all" {
+            issues = fullIssues
+            self.navigationItem.title = "#DASHBOARD"
+            tableView.reloadData()
+        } else {
+            issues = fullIssues
+            issues = issues.filter() { $0.category == with }
+            self.navigationItem.title = "#\(with.uppercased())"
+            tableView.reloadData()
         }
     }
 }
