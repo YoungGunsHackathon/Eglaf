@@ -34,7 +34,7 @@ class FilterViewController: UIViewController, StoryboardInit {
             NSAttributedStringKey.kern: 4
         ]
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "close"), style: .plain, target: self, action: #selector(cancel))
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "SELECT", style: .plain, target: self, action: nil)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "SELECT", style: .plain, target: self, action: #selector(saveToDefaults))
         self.navigationItem.rightBarButtonItem?.setTitleTextAttributes([
             NSAttributedStringKey.font: UIFont(name: "SFProDisplay-Regular", size: 14)!,
             NSAttributedStringKey.foregroundColor: UIColor.white,
@@ -45,6 +45,20 @@ class FilterViewController: UIViewController, StoryboardInit {
     
     @objc func cancel() {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func saveToDefaults() {
+        guard let path = tableView.indexPathForSelectedRow else {
+            self.dismiss(animated: true, completion: nil)
+            return
+        }
+        let selectedCategory = issueCategories[path.section]
+        var selectedStringRawValue = selectedCategory.rawValue
+        selectedStringRawValue.removeFirst()
+        let lowerCaseString = selectedStringRawValue.lowercased()
+        
+        UserDefaults.standard.set(lowerCaseString, forKey: "category")
+        dismiss(animated: true, completion: nil)
     }
 }
 
