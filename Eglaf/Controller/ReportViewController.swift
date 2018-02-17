@@ -11,8 +11,12 @@ import UIKit
 
 class ReportViewController: UIViewController, StoryboardInit {
     
+    var userHandler: UserHandler = UserHandler.sharedInstance
+    var issueHandler: IssueHandler = IssueHandler.sharedInstance
+    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var prioritySegment: UISegmentedControl!
+    @IBOutlet weak var descriptionField: UITextView!
     
     var issueCategories: [IssueCategory] = [.scanning, .catering, .security, .registration, .infoPoint, .other]
     
@@ -52,13 +56,29 @@ class ReportViewController: UIViewController, StoryboardInit {
             NSAttributedStringKey.kern: 3
         ]
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "close"), style: .plain, target: self, action: #selector(cancel))
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "POST", style: .plain, target: self, action: nil)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "POST", style: .plain, target: self, action: #selector(post))
         self.navigationItem.rightBarButtonItem?.setTitleTextAttributes([
             NSAttributedStringKey.font: UIFont(name: "SFProDisplay-Regular", size: 14)!,
             NSAttributedStringKey.foregroundColor: UIColor.white,
             NSAttributedStringKey.kern: 2
             ], for: .normal)
         self.navigationController?.navigationBar.tintColor = UIColor(red:0.35, green:0.43, blue:0.52, alpha:1)
+    }
+    
+    @objc func post() {
+        guard let path = collectionView.indexPathsForSelectedItems else {
+            self.dismiss(animated: true, completion: nil)
+            return
+        }
+        
+        var selectedCategory = issueCategories[path.first!.item].rawValue.lowercased()
+        selectedCategory.removeFirst()
+        let isUrgent = prioritySegment.selectedSegmentIndex == 0 ? false : true
+        let issue = Issue(description: descriptionField.text, category: selectedCategory, urgent: isUrgent, location: "")
+        
+        issueHandler.addIssue(issue: issue)
+        
+        self.dismiss(animated: true, completion: nil)
     }
     
     @objc func cancel() {
@@ -72,9 +92,6 @@ extension ReportViewController {
     }
 }
 
-extension ReportViewController: UIScrollViewDelegate {
-    
-}
 
 extension ReportViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
