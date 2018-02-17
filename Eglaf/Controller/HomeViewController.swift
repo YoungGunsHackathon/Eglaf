@@ -27,6 +27,11 @@ class HomeViewController: UIViewController, StoryboardInit {
             for issue in issuesFetched {
                 self.issues.append(issue)
             }
+            
+            self.issues = self.issues.sorted {
+                Int($0.createdTime!)! > Int($1.createdTime!)!
+            }
+            
             self.tableView.reloadData()
         }
         
