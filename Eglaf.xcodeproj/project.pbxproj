@@ -43,6 +43,10 @@
 		E37A2BD1203760C2006A3F7D /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37A2BCF203760C2006A3F7D /* CategoryCollectionViewCell.swift */; };
 		E37A2BD2203760C2006A3F7D /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E37A2BD0203760C2006A3F7D /* CategoryCollectionViewCell.xib */; };
 		E37A2BD420376744006A3F7D /* IssueCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37A2BD320376744006A3F7D /* IssueCategory.swift */; };
+		E37A2BD82037ABA8006A3F7D /* FilterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E37A2BD72037ABA8006A3F7D /* FilterViewController.storyboard */; };
+		E37A2BDA2037ABB3006A3F7D /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37A2BD92037ABB3006A3F7D /* FilterViewController.swift */; };
+		E37A2BDD2037AE4F006A3F7D /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37A2BDB2037AE4F006A3F7D /* CategoryTableViewCell.swift */; };
+		E37A2BDE2037AE4F006A3F7D /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E37A2BDC2037AE4F006A3F7D /* CategoryTableViewCell.xib */; };
 		E391AD782036D80D002B5FF4 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E391AD772036D80D002B5FF4 /* TabBarViewController.swift */; };
 		E391AD7A2036D85A002B5FF4 /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E391AD792036D85A002B5FF4 /* QRViewController.swift */; };
 		E391AD7D2036D8C0002B5FF4 /* StoryboardInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E391AD7C2036D8C0002B5FF4 /* StoryboardInit.swift */; };
@@ -91,6 +95,10 @@
 		E37A2BCF203760C2006A3F7D /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		E37A2BD0203760C2006A3F7D /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		E37A2BD320376744006A3F7D /* IssueCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueCategory.swift; sourceTree = "<group>"; };
+		E37A2BD72037ABA8006A3F7D /* FilterViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FilterViewController.storyboard; sourceTree = "<group>"; };
+		E37A2BD92037ABB3006A3F7D /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		E37A2BDB2037AE4F006A3F7D /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		E37A2BDC2037AE4F006A3F7D /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
 		E391AD772036D80D002B5FF4 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		E391AD792036D85A002B5FF4 /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		E391AD7C2036D8C0002B5FF4 /* StoryboardInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInit.swift; sourceTree = "<group>"; };
@@ -238,6 +246,7 @@
 				E306B7FA20371F6800CE5483 /* HomeViewController.swift */,
 				E306B7FE2037208E00CE5483 /* ProfileViewController.swift */,
 				E37A2BCD20375D4A006A3F7D /* ReportViewController.swift */,
+				E37A2BD92037ABB3006A3F7D /* FilterViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -270,6 +279,7 @@
 				E306B7F820371F5E00CE5483 /* HomeViewController.storyboard */,
 				E306B7FC2037208100CE5483 /* ProfileViewController.storyboard */,
 				E37A2BCB20375D31006A3F7D /* ReportViewController.storyboard */,
+				E37A2BD72037ABA8006A3F7D /* FilterViewController.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -281,6 +291,8 @@
 				E306B8022037246D00CE5483 /* IssueTableViewCell.xib */,
 				E37A2BCF203760C2006A3F7D /* CategoryCollectionViewCell.swift */,
 				E37A2BD0203760C2006A3F7D /* CategoryCollectionViewCell.xib */,
+				E37A2BDB2037AE4F006A3F7D /* CategoryTableViewCell.swift */,
+				E37A2BDC2037AE4F006A3F7D /* CategoryTableViewCell.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -373,9 +385,11 @@
 				E306B8042037246D00CE5483 /* IssueTableViewCell.xib in Resources */,
 				E306B8452037276E00CE5483 /* SF-Pro-Display-Light.otf in Resources */,
 				E37A2BCC20375D31006A3F7D /* ReportViewController.storyboard in Resources */,
+				E37A2BDE2037AE4F006A3F7D /* CategoryTableViewCell.xib in Resources */,
 				E37A2BD2203760C2006A3F7D /* CategoryCollectionViewCell.xib in Resources */,
 				E306B7F920371F5E00CE5483 /* HomeViewController.storyboard in Resources */,
 				C5CCCA0E203721D1009756BB /* GoogleService-Info.plist in Resources */,
+				E37A2BD82037ABA8006A3F7D /* FilterViewController.storyboard in Resources */,
 				C5ABD98A20364F6000FA5E75 /* Assets.xcassets in Resources */,
 				E306B8462037276E00CE5483 /* SF-Pro-Display-Regular.otf in Resources */,
 				C5ABD98820364F6000FA5E75 /* Main.storyboard in Resources */,
@@ -474,8 +488,10 @@
 				C5ABD9A0203653E300FA5E75 /* Ticket.swift in Sources */,
 				C58BD0F12036DA1C004CEF79 /* Utils.swift in Sources */,
 				C58BD1012036FB15004CEF79 /* User.swift in Sources */,
+				E37A2BDA2037ABB3006A3F7D /* FilterViewController.swift in Sources */,
 				C5ABD9982036510900FA5E75 /* APIService.swift in Sources */,
 				C58BD0FD2036FA9D004CEF79 /* UserHandler.swift in Sources */,
+				E37A2BDD2037AE4F006A3F7D /* CategoryTableViewCell.swift in Sources */,
 				C5ABD99D2036515200FA5E75 /* EventAPIService.swift in Sources */,
 				E391AD782036D80D002B5FF4 /* TabBarViewController.swift in Sources */,
 				C5ABD9A42036627900FA5E75 /* CheckInResponse.swift in Sources */,
