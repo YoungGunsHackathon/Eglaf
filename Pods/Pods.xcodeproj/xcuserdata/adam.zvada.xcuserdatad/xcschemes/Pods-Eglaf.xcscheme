@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FE87C7E03C6DCE6D0D7C18FE9F79541A"
+               BlueprintIdentifier = "182F9A4DC060E859FEA8551F4905D11E"
                BuildableName = "Pods_Eglaf.framework"
                BlueprintName = "Pods-Eglaf"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FE87C7E03C6DCE6D0D7C18FE9F79541A"
+            BlueprintIdentifier = "182F9A4DC060E859FEA8551F4905D11E"
             BuildableName = "Pods_Eglaf.framework"
             BlueprintName = "Pods-Eglaf"
             ReferencedContainer = "container:Pods.xcodeproj">

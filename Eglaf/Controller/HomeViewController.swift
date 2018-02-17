@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Lottie
+import SwipeCellKit
 
 class HomeViewController: UIViewController, StoryboardInit {
     
@@ -144,8 +145,33 @@ extension HomeViewController: UITableViewDataSource {
             cell.categoryLabel.textColor = categoryIssue.categoryColor
             cell.tagView.layer.borderColor = categoryIssue.categoryColor.cgColor
         }
-        
+        cell.delegate = self
         return cell
+    }
+}
+
+extension HomeViewController: SwipeTableViewCellDelegate {
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+        guard orientation == .left else { return nil }
+        
+        let deleteAction = SwipeAction(style: .default, title: "On it!") { action, indexPath in
+            // handle action by updating model with deletion
+            self.issues.remove(at: indexPath.section)
+        }
+        
+        deleteAction.image = #imageLiteral(resourceName: "hands")
+        deleteAction.backgroundColor = UIColor(red:0.3, green:0.85, blue:0.39, alpha:1)
+        
+        return [deleteAction]
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeTableOptions {
+        var options = SwipeTableOptions()
+        //let customStyle = SwipeExpansionStyle(target: .percentage(1.0), additionalTriggers: [], elasticOverscroll: false, completionAnimation: .fill(.manual(timing: .with)))
+        
+        options.expansionStyle = .destructive
+        //options.transitionStyle = .reveal
+        return options
     }
 }
 

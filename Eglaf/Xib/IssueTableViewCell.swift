@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SwipeCellKit
 
-class IssueTableViewCell: UITableViewCell {
+class IssueTableViewCell: SwipeTableViewCell {
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!

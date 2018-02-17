@@ -13,7 +13,7 @@ target 'Eglaf' do
 	pod 'Firebase/Database'
 	pod 'Firebase/Storage'
 	pod 'lottie-ios'
-
+        pod 'SwipeCellKit'
   # Pods for Eglaf
 
 end
