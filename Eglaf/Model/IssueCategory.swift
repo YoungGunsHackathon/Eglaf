@@ -20,17 +20,17 @@ enum IssueCategory: String {
     var categoryColor: UIColor {
         switch self {
         case .catering:
-            return UIColor(red:0.27, green:0.71, blue:0.77, alpha:1)
+            return UIColor(red:0, green:0.48, blue:1, alpha:1)
         case .scanning:
-            return UIColor(red:1, green:0.95, blue:0.33, alpha:1)
+            return UIColor(red:0.91, green:0.73, blue:0, alpha:1)
         case .infoPoint:
-            return UIColor(red:0.73, green:0.53, blue:0.99, alpha:1)
+            return UIColor(red:0.64, green:0.37, blue:1, alpha:1)
         case .security:
-            return UIColor(red:1, green:0.62, blue:0.35, alpha:1)
+            return UIColor(red:1, green:0.58, blue:0, alpha:1)
         case .registration:
-            return UIColor(red:0.45, green:1, blue:0.6, alpha:1)
+            return UIColor(red:0.35, green:0.43, blue:0.52, alpha:1)
         case .other:
-            return UIColor(red:0.45, green:1, blue:0.6, alpha:1)
+            return UIColor(red:0.3, green:0.85, blue:0.39, alpha:1)
         }
     }
 }

@@ -57,7 +57,7 @@ extension HomeViewController {
         ]
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "add"), style: .plain, target: self, action: #selector(showReportScreen))
         self.navigationController?.navigationBar.tintColor = UIColor(red:0.35, green:0.43, blue:0.52, alpha:1)
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "ALL", style: .plain, target: self, action: nil)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "ALL", style: .plain, target: self, action: #selector(showFilterScreen))
         self.navigationItem.leftBarButtonItem?.setTitleTextAttributes([
             NSAttributedStringKey.font: UIFont(name: "SFProDisplay-Regular", size: 14)!,
             NSAttributedStringKey.foregroundColor: UIColor(red:0.35, green:0.43, blue:0.52, alpha:1),
@@ -66,6 +66,11 @@ extension HomeViewController {
     }
     @objc func showReportScreen() {
         let vc = ReportViewController.storyboardInit()
+        let navVC = UINavigationController(rootViewController: vc)
+        present(navVC, animated: true, completion: nil)
+    }
+    @objc func showFilterScreen() {
+        let vc = FilterViewController.storyboardInit()
         let navVC = UINavigationController(rootViewController: vc)
         present(navVC, animated: true, completion: nil)
     }
